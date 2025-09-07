@@ -1,0 +1,3855 @@
+Hash,Message,Parent Hashes,Is Merge Commit,Modified Files
+4e5d290b925a1fb9d74628ff8c64f9ed8ef86d60,#1 general fixes,['115933b6702a918f7f7947e01021d6b250aa2c6f'],False,api_data.py
+892a28ced8a782e74d276f962d41b9cc037bff90,#1 Minor fixes,['d2dad49abd3fa12b4a97708d6539deb151b28b0d'],False,api_data.py
+09413f9691905afc0ca3a886c7480cff3e9d6bd8,#2 Fixes unit tests,['2ad3a9cfc61347dc0e83d273381af701f0a4a530'],False,test_api_data.py
+ee2a03d7fdb6c1ad4f14f56c23da084b3a21ed10,"Fix expected value for the test_debian_extract_data test #16
+
+Signed-off-by: Thomas Druez <tdruez@nexb.com>",['a042d5537addb04f36e70fd159e865a69db87d84'],False,test_scrapers.py
+0334beb45e3370ea11e4bc0f8abc53409a09a872,"Fixed pycodestyle error and re-worded variable names
+
+Signed-off-by: Kartik Sibal <kartiksibal@gmail.com>",['f1a1e99d6196c684a86e7b5aa602639bd6ca6f81'],False,"data_dump.py, test_data_dump.py"
+b0168779d70001f20bc9221b2dca58b61c201002,"Fix failing tests following codebase structure changes
+
+Signed-off-by: Thomas Druez <tdruez@nexb.com>",['86c359a3e579d1cb1c643ca4a65df9d6160fb6e5'],False,"test_api.py, test_data_dump.py"
+da1e819c7bc2f4c2cfa958c0784f546494435dee,"Fix the app name in the Procfile and add entries in the README
+
+Signed-off-by: Thomas Druez <tdruez@nexb.com>",['0878f3087ee03c8657f02954097afb8d9e5b9663'],False,"Procfile, README.md, requirements.txt"
+38c6b88226371d0a6d46d271865917cfc3e685eb,"Fix tests
+
+Signed-off-by: Ranvir Singh <ranvir.singh1114@gmail.com>",['46bf7e3166dc5a65e6a4c9dd4726e5ebf3d60271'],False,"0003_auto_20190406_0950.py, models.py"
+84af41668639f1b748a7c4c2e8f1aecee33db056,"Merge pull request #42 from nexB/bump-versions
+
+* Bump dependency versions
+* Update README with latest code and add postgresql as a dependency
+* Remove DJANGO_DEV env from travis CI
+* Add travis environment variable check in settings
+* Fix tests
+
+Signed-off-by: Ranvir Singh <ranvir.singh1114@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>","['55a633db3c09d8b78d21bffea25a510e1444acdf', '4424ad2cd9deabc465274c260aaad6ce9ef3f738']",True,
+ca646245f990ee9d686f1b3d637cebfa52fcef4b,"Fix tests
+
+Signed-off-by: lohani2280 <lohani.ayush01@gmail.com>",['0f124c1404724306608dec0b9cb7d40deb72a1a4'],False,"0005_auto_20190411_1644.py, models.py"
+c9aa25bf65395a59302fafface69d32a94d3508b,"Update Django version
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>
+
+Fixes #50",['7343bde30124a72ba760a7d98760cf2d3ab9543a'],False,requirements.txt
+ec1508599547e82977572d2d1d7ac1eec816ddb8,"Improve setup instructions in README
+
+- Fix instructions for Debian-based distros
+- Add instructions for running Postgres in Docker
+- Set DJANGO_DEV=1 in runserver call to have localhost in
+- ALLOWED_HOSTS
+
+closes #47
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['1dfae11f9dbb1db584a225d5760527c3acd2c435'],False,"README.md, dev.py"
+97d2491492800168627d29154f071205450f5463,"Replace test data for Debian security tracker
+
+The previous fixture had some strange values like ""not-resolved""
+for ""status"" and ""un-remote"" for ""scope"". It doesn't look like
+those values are used by the Debian security tracker.
+To address issue #38 we need records with ""status"" values
+""resolved"" and ""open"".
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['d5ab2fe053677fe5e1ecc62f0c307cd8c777ddd7'],False,"test_api.py, debian.json, test_data_dump.py, test_scrapers.py"
+0e119b0ec30f85081b0fbb5125848e8633156f80,"Include ""version"" attribute in debian.extract_vulnerabilities()
+
+Before this change, only ""fixed_version"" was retained. This is
+the lowest version of the package that includes a fix for the
+given vulnerability. However in the meantime, newer versions
+of the package might have become available in the Debian release
+passed in as ""base_release"".
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['97d2491492800168627d29154f071205450f5463'],False,"debian.py, test_scrapers.py"
+6f08acecf7cad8aa8fa5443cf30bbf244900c966,"Merge pull request #125 from haikoschol/arch-import-fixes
+
+Add unique CVE ID field to Vulnerability","['58e3ff375f8cc40cd457aa8130a5ac5264e29cd7', '5c9493db2650f3db0beb45ad0c1b77f7ab64c880']",True,
+9a1f74efc270575bd0fc44f48988842535d25976,"Add Apache 2.0 LICENSE file
+
+fixes #115 
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['941eea1d319f9966e44f316b53712e0bc3364823'],False,LICENSE
+b34e6c6a3afaea695164f6a6bef2ee2bb50d8352,"Add Apache 2.0 LICENSE file
+
+fixes #115 
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['aa1cdcb7f3c10eabe102f4ddb6f4c13d737d537f'],False,LICENSE
+110c2ca7d273c2bfdf678316913f104002bc6178,"Fix buggy list manipulation
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['a546d429d4e3856959d183429d7c5055e386cd9e'],False,npm.py
+f55d2fbe6d494f23efe3313e23a3355336d5d757,"Merge pull request #131 from nexB/npm-issue
+
+Fixes the NPM import","['26121992619f942f2ec4160ea5b6d2d97af8a2fd', '110c2ca7d273c2bfdf678316913f104002bc6178']",True,
+1abf16a904cf069ec189d503b979c2fbb3e685c1,"Fixes typo in Django admin
+
+Signed-off-by: sbs2001 <shivam.sandbhor@gmail.com>",['61ba0a098e9ef10d0794ee8e09addf263b38995c'],False,models.py
+7cd63fa042e2c5e588f947676449c86625b63c0c,"Fix npm.py bug
+
+Signed-off-by: sbs2001 <shivam.sandbhor@gmail.com>",['1abf16a904cf069ec189d503b979c2fbb3e685c1'],False,npm.py
+99b4191df5ae6cb11bbedd8ba590e89f41ca3f55,"Merge pull request #147 from haikoschol/add-fixtures
+
+Remove dependency on importers from API tests","['335786522f334cc83b999532b3e39606c86ea541', '700a4698c74846e83cd18aab46c78a5852f387f6']",True,
+6d8ed831522cde4894c4efef0b6823503c91b21e,"Use 'with' handler for  urlopen() and fix other nits
+
+Signed-off-by: sbs2001 <shivam.sandbhor@gmail.com>",['1551e315971604543bd86013a271e6a57c15190c'],False,"data_dump.py, rust.py"
+848ee1285f8c6bdbc1245e59eb788b405cbe2088,"Fix resource leak in NPM importer
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['dc318c3f942f2efdfab8c0ff89abb5f39e5f89b6'],False,npm.py
+612c3bd2caded37707ea21f87ad8f22fc0c7fc25,"fix: check for 'patched_versions' key
+
+Signed-off-by: Islam ElHakmi <eslam.elhakmey3@gmail.com>",['848ee1285f8c6bdbc1245e59eb788b405cbe2088'],False,rust.py
+f323d3409cc04d6784febaaeb137ef97f46c5214,"fix: fix CI error
+
+Signed-off-by: Islam ElHakmi <eslam.elhakmey3@gmail.com>",['612c3bd2caded37707ea21f87ad8f22fc0c7fc25'],False,rust.py
+1f8e5241a9feb8e2ec8305e78d48857036bd5405,"fix: update rust Schema
+
+Signed-off-by: Islam ElHakmi <eslam.elhakmey3@gmail.com>",['f323d3409cc04d6784febaaeb137ef97f46c5214'],False,rust.py
+633ef69ba5b5c23cbfed0c63a72845b04b6b9da3,"fix: fix CI
+
+Signed-off-by: Islam ElHakmi <eslam.elhakmey3@gmail.com>",['1f8e5241a9feb8e2ec8305e78d48857036bd5405'],False,rust.py
+193e953b846503a49ce23d382a7f319f69d07736,"Merge pull request #155 from EslamHiko/fix-key-error
+
+fix: check for 'patched_versions' key","['848ee1285f8c6bdbc1245e59eb788b405cbe2088', '633ef69ba5b5c23cbfed0c63a72845b04b6b9da3']",True,
+5781a7873ca63584a0f888e274b20cbb53631093,"test: fix lint errors
+
+Signed-off-by: Islam ElHakmi <eslam.elhakmey3@gmail.com>",['988a91ad40b31124628ff3db1dee4ec2755f0810'],False,test_rust.py
+c5c69a46f2476056158cfb87bdc304baabba5eba,"Merge pull request #163 from sbs2001/fix-npm
+
+Fix npm importer","['80a7b6e50c37dc599f28351f3e132e8bacbc551f', 'bf31b165489c7c0ca6ac7a99dff22679b036eb58']",True,
+4c952ad03d3c72543f1bc8ad36567ba7519300bc,"Merge pull request #166 from sbs2001/develop
+
+Allow skipping internet dependent tests, fix npm dump","['c5c69a46f2476056158cfb87bdc304baabba5eba', 'c97975a00d274efb045c14cd7b0b945c7cb72b53']",True,
+3e38b3a03d8902f873177ef81b40692dd8cb1fc2,"Fix safetydb importer
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['4c952ad03d3c72543f1bc8ad36567ba7519300bc'],False,"data_dump.py, safety_db.py"
+4d7a25653fdfec3d40ac8cb3c19f693fd7344a30,"Merge pull request #170 from sbs2001/safetydb
+
+Fix safetydb","['4c952ad03d3c72543f1bc8ad36567ba7519300bc', '7b578db3516229345cc578d9efaca51b1ce2b843']",True,
+c0726b243f20e3a4539bbcddafb6ef8831e20e28,"Fix bugs in alpine linux importer
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['3ab44858a0e3d5178d2b6c8baeeaf6708ab7ecdf'],False,"data_dump.py, import.py, alpine_linux.py"
+ff9ffeed7dbfb28d27ae30c31666db51b05e2d65,"Improve GitDataSource API
+
+Having separate methods added_files() and updated_files() is not ideal
+since the same file can be returned by both methods. When a file has
+been added and then later modified within the window of time considered
+by these methods, the file should only be reported as an added file.
+
+Therefore this commit combines the methods added_files() and
+updated_files() into file_changes(), which returns a tuple of sets for
+added and updated files, respectively.
+
+It also fixes a time-math issue; commit timestamps are converted to UTC
+before being compared to the cutoff timestamp (that is always in UTC).
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['5b649776153fc8c04aabe7e05d9b22bd208f3937'],False,"data_source.py, test_data_source.py"
+2c482402b94c50aac3b81ca83cd5cfbf9c7ffc63,"Fix typo
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['ff9ffeed7dbfb28d27ae30c31666db51b05e2d65'],False,import_runner.py
+b74bbe46599106257ec3e5cd9f2ffc09206345ac,"Fix lint
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['42c99fb701a2d3fa47218a886c6ffe657cb39ad0'],False,".travis.yml, data_source.py, import_runner.py, alpine_linux.py, archlinux.py, debian.py, npm.py, rust.py, safety_db.py, import.py, models.py, test_alpine.py, test_archlinux.py, test_debian.py, test_import_cmd.py, test_import_runner.py, test_npm.py, test_rust.py, test_safety_db.py"
+946ff73869b893c628234c2001efd26117485284,"Merge pull request #184 from sbs2001/fix_schema_validator_alpine
+
+Update the schema validator in  alpine linux importer","['29f335189a3406675bc809bea70405c3b0b7d0a9', '9202ba0ebfd1533ce343c94e7a87ddeb69736575']",True,
+48f495a444e1097a061e4753ec6b7dc532f327e2,"Rename  to . Utilise  in RubyDataSource. Add caching in rubyAPI . Fix reference_urls in RubyDataSource
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['2b6b3eb883fd9411e0b0e1c0a91a62d3cd2a4768'],False,"__init__.py, ruby.py, 0008_ruby_importer.py, test_ruby.py"
+7593f2928375419a1298ed09fa8675366df1fcf0,"Removed minor optimisation which could be the cause of bugs in case same vulnerability affects different packages
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['48f495a444e1097a061e4753ec6b7dc532f327e2'],False,import_runner.py
+4f5caea0ff14a6e1a7584a5f342e016e9d22de9c,"Fix config for SafetyDB importer
+
+The migration that adds the SafetyDB importer used the URL of the git
+repository. However the importer is not actually based on GitDataSource,
+since the repository only contains a single file with all security data,
+so there is no advantage over just downloading the current version from
+master via HTTPS.
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['1f40a0381614daebff4a7125a27c085f7f4aa9c0'],False,0006_safetydb_importer.py
+52a0fc10a09705442af039e9e46b4d14e9abc121,"Fix Advisory.__hash__()
+
+The hash is computed from a string, which is built by iterating over
+attributes of type Iterable/Sequence, such as impacted_package_urls.
+
+This change sorts those attributes before concatenating to the string,
+to avoid different hashes when the order of impacted_package_urls, etc
+differs.
+
+NB A better solution would be to avoid implementing __hash__() and use
+immutable collections like tuple and frozenset for the above mentioned
+attributes instead.
+
+See https://eng.lyft.com/hashing-and-equality-in-python-2ea8c738fb9d
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['4f5caea0ff14a6e1a7584a5f342e016e9d22de9c'],False,data_source.py
+de1b8e77aa3e7a44cbea0a9126f362e211a4706a,"Merge pull request #189 from haikoschol/fix_advisory_hash
+
+Fix Advisory.__hash__()","['4f5caea0ff14a6e1a7584a5f342e016e9d22de9c', '52a0fc10a09705442af039e9e46b4d14e9abc121']",True,
+623fa2cc4627e7e1e9f9142adb32f50692af02b6,"Merge pull request #192 from sbs2001/fix-cli
+
+Add type conversion to int for batch_size , when batch_size is specified via cli","['0dd2c5bffe0285680f04085bf88c4ffe5d77f3e5', 'fc505f5072ec25debc08b676460e782b006f0924']",True,
+a35db614da46762e927da290b5dd8dc495e96ad4,"Fix style
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['ea9974b406036e428dd8d57217ff727f08ae61ae'],False,"requirements.txt, oval_parser.py, ubuntu.py"
+8c4876d833b0d9eed160fe6b716dd714bbfa3ec7,"Store summary in _insert_vulnerabilities_and_references()
+
+Bugfix: For advisories with a CVE ID that don't exist in the database
+yet, the summary was not stored.
+
+Signed-off-by: Haiko Schol <hs@haikoschol.com>",['aded87c2e3a860c07cb47d4bfe919064b8326d74'],False,"import_runner.py, test_import_runner.py"
+826de1066794546bb02d1073bac28acde01f0284,"Merge pull request #195 from haikoschol/fix_store_summary
+
+Store summary in `_insert_vulnerabilities_and_references()`","['995a70208eb00e743af77b2782e6541ce36f5798', '8c4876d833b0d9eed160fe6b716dd714bbfa3ec7']",True,
+e194649f246dcb6ccadb97a0d398a1e1adcdf3d9,"Merge pull request #199 from haikoschol/fix_version_maxlen
+
+Fix max_length for Package.version in initial migration","['6e9dde07089d30810fc847e9c8d3770b728700de', 'c5b2884c7ab060ff3516e31f59fe5872ca4dd931']",True,
+c5f8a688e79c64dee9cca53ad50c16d811b988e2,"Remove data_dump.py , ubuntu's old test data files , modify pytest conf
+
+data_dump.py is finally obsolete, hence removing it.
+Ubuntu now uses OVAL hence removing it's old test_data.
+To achieve this some changes in pytest's conftest.py were made,
+by removing old fixtures which were unused.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['1e0da4002ee3f7a66cf560e41c313d0d6722a481'],False,"data_dump.py, conftest.py, ubuntu_main.html"
+30411446a77994f0142166e81c87f8fc27b50798,"Merge pull request #220 from sbs2001/oval_memory_fix
+
+Use yield to save memory in OvalDataSource's updated_advisories","['fe1026ab5964c612ddb29202127b400e648109a2', '0f5039bac9e68d22646e35ecfc0462c5898f08eb']",True,
+58d0376e7319d06387662cb393f3c39d9893088d,"Merge pull request #222 from haikoschol/fix_get_or_create_vuln
+
+Always store summary of vulnerability","['8788014229419c2d34342a2edb76af1850f5b2b3', 'bf44896a3772b86fb71666218e6d7e918eec0be2']",True,
+38d90a0244b6b7d951f777b215faede8a66d86ba,"Pass function instead function call in forms
+
+This is done because when running migrations, the function
+which made db queries was being run hence failing the CI.
+By passing the function itself instead, this issue is fixed
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['7b8835a0c18045613f8ca13f4d37dcac4ff42ab6'],False,forms.py
+2a0b6d10ff7762049281476d4ed6fe368eb7c601,":bug: Fix get_success_url method of PackageUpdate view
+
+Upon updating, previously user would get a blank screen. This
+is fixed.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['0a1d007c99e1c0af5df6c67aba04727478647e69'],False,views.py
+38905e06be5359fc96cb28d6be64d1e90fbe6557,":bug: Avoid giving user the opportunity to create conflicting relations
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['398311920f532c513f00af9f54150358bdfd14d3'],False,views.py
+a195a5dd952527b5f42d3688f8cf92e216c30f41,"Fix wrong ref urls in archlinux importer
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['c53176670eab18268a9938f6dff359366287d1cd'],False,archlinux.py
+a36232d2272ecc9af976927279f6c8aba8e72e6e,"Add a package_managers module
+
+Before this commit every Importer had it's own VersionAPI class, which was
+used to fetch all versions of a package from the corresponding package manager.
+
+This was problematic due to 2 reasons (1)  Reusing these VersionAPI was hacky
+(2) The importer files would contain most of the code related to fetching this
+version info.
+
+This is fixed by putting all this VersionAPI classes into one
+vulnerabilities/package_managers.py module and the importers will now import
+the classes from here.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['916dc0d920d02f94f1cd8201060b1878e2394324'],False,"debian_oval.py, github.py, npm.py, ruby.py, rust.py, safety_db.py, ubuntu.py, package_managers.py, test_debian_oval.py, test_github.py, test_npm.py, test_package_managers.py, test_ruby.py, test_rust.py, test_safety_db.py, test_ubuntu.py"
+56e719c74736c049a2a96b12352a38019b0f5c91,":bug: Fix bug in debian's response_is_new method
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['80f78da812338d5f82a5c12c0561d505df7a327d'],False,debian.py
+f735f8aa9cc64efd890a5db8876d4b0bb6933b4f,"Merge pull request #245 from sbs2001/debian_bug_fix
+
+:bug: Fix bug in debian's response_is_new method","['80f78da812338d5f82a5c12c0561d505df7a327d', '56e719c74736c049a2a96b12352a38019b0f5c91']",True,
+fc01392eaebeac2c1ee88fded8314cd63766d51d,":wrench: Fix UI bug with vulnerability search view's pagination
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['a44d173b926862542fc6107b416f217791efae4a'],False,"forms.py, vulnerabilities.html, views.py"
+3e10ff3f6387c7ce6484b76952ca2152c7166088,"Merge pull request #257 from sbs2001/fix_ui
+
+ Fix UI bug with vulnerability search view's pagination","['a44d173b926862542fc6107b416f217791efae4a', 'fc01392eaebeac2c1ee88fded8314cd63766d51d']",True,
+e6941e69f253a2df341e72a05ca10ee32da5cfcc,":pencil2: Add  prefix to all the env variables required by VulnerableCode
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['b608624101c6ae75c31af3919da27f0440bb5817'],False,"Dockerfile, README.md, docker-compose.yml, settings.py"
+70dabcfa886a46b86e5530ee0a60d05a16ad0656,":rotating_light: Fix broken NVD tests
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['a66050b4c675007e73e55beb44ab10e1f116f531'],False,test_nvd.py
+e65ac68177dd41eaae9a79914712bac00058e0aa,"Merge pull request #258 from sbs2001/fix_build
+
+:rotating_light: Fix broken NVD tests","['a66050b4c675007e73e55beb44ab10e1f116f531', '70dabcfa886a46b86e5530ee0a60d05a16ad0656']",True,
+cab316fd112e434e2867b3739c11e0ad01b9c0ee,"Fix code style
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['a014c3bc83bba94da6da135ae06378be881503e1'],False,"data_source.py, import_runner.py"
+e7739d1bde688290f23f618b5ac857bb09364f14,"Disable failing safetyDB import #244
+
+Until we have a fix, we should disbale this.
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['2f1d3944d0914d3de55f4abf7672bbdc49e1d823'],False,importer_yielder.py
+13bafd5266458630692c8a3571dc22aa1921795e,"Fixed the spelling mistakes and grammatical errors
+
+Signed-off-by: Abhigyan Kumar Singh <singhabhigyankumar@gmail.com>",['8cb17c0cc1d48f78ebe831c38c69b705021b993e'],False,README.rst
+40fe93611703cd37eb18e72bf2c9c747e5da1863,"Merge pull request #269 from Abhigyankrsingh/Grammatical-errors
+
+Fixed the spelling mistakes and grammatical errors","['8cb17c0cc1d48f78ebe831c38c69b705021b993e', '13bafd5266458630692c8a3571dc22aa1921795e']",True,
+38ec05ff262b73cf9e4d6d8fa95fb8ff3ed97c40,"add elixir security importer and test
+
+Signed-off-by: Tushar912 <tushar.912u@gmail.com>
+
+add elixir security to init.py
+
+Signed-off-by: Tushar912 <tushar.912u@gmail.com>
+
+add test for elixir security
+
+Signed-off-by: Tushar912 <tushar.912u@gmail.com>
+
+fixed code style
+
+Signed-off-by: Tushar912 <tushar.912u@gmail.com>",['7f8ae6399b02b1d508689b303f117e2f03f7854a'],False,"importer_yielder.py, __init__.py, elixir_security.py, test_file.yml, test_elixir_security.py"
+922e34f5ebb73e3189bcf23cde18ae9601619d46,"fixed code style
+
+Signed-off-by: Tushar912 <tushar.912u@gmail.com>",['f809a89972e17c2eb65a4297991fc3310fdb1c82'],False,"elixir_security.py, package_managers.py, test_elixir_security.py"
+39430e7f6e2dca3e642ce0f3ef24b24f315b845e,"Fix workflow.
+
+Signed-off-by: Rolf Schröder <rolf.schr@gmail.com>",['a3d833e65a716f3496a86b44ad48fe4fbc521f17'],False,test-import-using-nix.yml
+d14115c045661d43e1482842c029ecbaeefa74a5,"Fix codestyle
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['3a7c41ab8170387dca138f0bc0fdcb2dccdcf6ba'],False,rust.py
+c543f979b842e06e3d8f21a6475a82a8a66364e5,"Cleanup codebase and fix minor bugs and other improvements
+
+ * Move the implementation of the methods for handling etags and different
+   file  formats into a separate `helpers.py` module to prevent code duplication
+
+ * Fix bugs in the msr2019 importer.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['7119dd8fddf2a4450eb3e0f48e1764ac29d0ee6f'],False,"helpers.py, import_runner.py, importer_yielder.py, alpine_linux.py, apache_httpd.py, debian_oval.py, kaybee.py, nginx.py, npm.py, nvd.py, openssl.py, project_kb_msr2019.py, ruby.py, rust.py, safety_db.py, suse_backports.py, ubuntu.py, ubuntu_usn.py, import.py, test_helpers.py, test_ubuntu.py"
+8ade1e81a31dcc8cfc2817368da0f73e628c2861,"Use toml instead of pytoml and fix imports in helpers.py
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['c543f979b842e06e3d8f21a6475a82a8a66364e5'],False,"requirements.txt, helpers.py"
+0dd173c7c16b7f17a2846762b68cebfd738dac37,"Fix missing import in package_managers.py
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['c0c0b3f071c679e27599fbfeb9b6ae24765e2a56'],False,package_managers.py
+9c030678a48498ffffb827b867c2850cb1c6be49,"Fix PackageRelatedVulnerablity* views
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['44d0c0d905c26b496a85c437f624f59034a71a95'],False,views.py
+25c5aa1dcd0e0a4f410d9219b946d40cbf2a254e,"Cleanup codebase and fix minor bugs and other improvements
+
+ * Move the implementation of the methods for handling etags and different
+   file  formats into a separate `helpers.py` module to prevent code duplication
+
+ * Fix bugs in the msr2019 importer.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['9c030678a48498ffffb827b867c2850cb1c6be49'],False,"alpine_linux.py, rust.py, import.py"
+322bf12e96e26b1b4281db7c8dc88c3844cef268,"Merge pull request #278 from sbs2001/cleanup
+
+Cleanup codebase and fix minor bugs and other improvements","['7119dd8fddf2a4450eb3e0f48e1764ac29d0ee6f', 'd03331efbc18a7504bd5ea6a6f0675b01c3cd305']",True,
+7237b047a4061f3995fe799b520634f401f9026f,"Minor fixes and improvements in Github Importer
+
+* The github importer used to abandon a vulnerability if
+  the affected package had invalid name. This commit changes that
+  behaviour to instead  skip the package and import the vulnerability
+
+* This commit also enables github api to import vulnerabilities for python
+  and rubygems packages.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['5e551675152b5dea32a50b6f2348a1fbff7c58b6'],False,github.py
+58a253fd1abcb9983ea062f1d52624660cefd002,"Merge new changes and use load_yaml from helpers
+
+used load_yaml from helpers
+
+Signed-off-by: Tushar912 <tushar.912u@gmail.com>
+
+fix typo in importer
+
+Signed-off-by: Tushar912 <tushar.912u@gmail.com>","['ee6dd622cfd007dd44b60c1806653fed9d4f30f7', 'bdf7c85e3516d358fdf797404f3afadf1066b1a8']",True,
+3754f9a7219d7cfe0cb8e306c10f2e34e10b8a42,Merge branch 'main' into fix_null_qualifier,"['88c8cecc519585b84323fb6c658ec4737c0625c4', '7c60c0256c5f29abf8d0b09a40a3c3e697b0455a']",True,
+9cac5f8a4a1900cfdc5d80596ee98c6d32b947b8,"Merge pull request #313 from sbs2001/fix_null_qualifier
+
+Don't allow null values for qualifiers","['7c60c0256c5f29abf8d0b09a40a3c3e697b0455a', '3754f9a7219d7cfe0cb8e306c10f2e34e10b8a42']",True,
+3b903ae24f812a6ad32f4422ae06385330c2367f,Fix formatting in README.rst,['9cac5f8a4a1900cfdc5d80596ee98c6d32b947b8'],False,README.rst
+38d4d1a42c0ee1a6a60d9bca988ea03b99976ab7,"Add FIXME comment to Etag function
+
+We are not using etag correctly. Also the function name is misleading
+as we are checking the Etag in this create_etag function
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['8350f6cc1df15aa6d02d7db5bbe80260d1815a59'],False,helpers.py
+0c9bf6fc3528a9ba6893b7811dcad59efe0ca7d4,"Revert ""Add FIXME comment to Etag function""
+
+This reverts commit 38d4d1a42c0ee1a6a60d9bca988ea03b99976ab7.",['dc21a604284cf233bbd7945caec166dac8ed37a3'],False,helpers.py
+dfa1f1db7371660cef6c279a36dd2457e616683d,"Fix package result count in  web ui
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['d35abb4264c58c65f193475ca653df6778a3acb1'],False,"packages.html, views.py"
+83a5e188f756c56e66fdc152a1d3052b32d49f67,"Merge pull request #329 from sbs2001/325-fix-ui-pkg-count
+
+Fix package result count in  web ui","['d35abb4264c58c65f193475ca653df6778a3acb1', 'dfa1f1db7371660cef6c279a36dd2457e616683d']",True,
+5428b372fb76919033d33606fb9a8e23c64e1a8a,"Make PR review changes for PR #290
+
+* Correct typo in severity_systems.py
+
+* Use typo for scoring fields instead of list
+  in models.py
+
+* Handle absence of bugzilla and RHSA  better in redhat.py
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['be24df02f5726edf8ae8493a6bd3e80644be60d0'],False,"redhat.py, models.py, severity_systems.py"
+8d194632d40178c279f70ca8ac960e288bde7df4,"Fix tests
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['d78cd0f2541d069839165f012a50087443130797'],False,"admin.py, severity_systems.py, test_nvd.py, test_redhat_importer.py"
+a75884b1914e5ff1d0252a10c6c934410eee023d,"Fix regex in schema validator in alpine importer
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['1d7b64e9172dbc3412229eb346e399ffebc9f3a4'],False,alpine_linux.py
+57481fce55432dfd6cf4fff3b11df2a84d334986,"Update deps to fix tests on latest python
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['a75884b1914e5ff1d0252a10c6c934410eee023d'],False,requirements.txt
+b30e74a4efa6ba0c9d9977e65d3793ba0194ba2a,"Fix whitespaces and use better colors
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['1d7b64e9172dbc3412229eb346e399ffebc9f3a4'],False,"base.html, index.html, packages.html, vulnerabilities.html, vulnerability.html"
+fd813ba7898a6746c0ecb8f225b508f133427d1e,"Fix codestyle
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['8ff771641c01726443f6760d2a966f72bca67ac5'],False,"forms.py, views.py"
+e105d4db62ba6e243b0b90bb65d4763f23ca4a66,"Fix sequencing of Vulnerable and Patched packages in search results
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['e06648a61d1427e48e36f9e42e8ce6af949ed7d4'],False,"packages.html, vulnerabilities.html, vulnerability.html"
+7c0ba208c51512cdb221d13298844a6f799238f8,"Fix headers of all views
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['e105d4db62ba6e243b0b90bb65d4763f23ca4a66'],False,"package_update.html, packages.html, vulnerabilities.html, vulnerability.html"
+84fcee0c063339b46c79f03557b9d80c8a0dcd0a,"Merge pull request #347 from sbs2001/fix-alpine-schema-regex
+
+Fix regex in schema validator in alpine importer","['34d9a36fa0b6d387388ddf0a31a4b638e467996a', '57481fce55432dfd6cf4fff3b11df2a84d334986']",True,
+8ce911a5db986c17239a0f881106b0b736c14459,"Fix tests for api
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['531c8fc527fadc6b2188793465e2e28b6b0b9e0f'],False,test_api.py
+9b5648394947693a6c74e6916545a9d9f4eb9445,"Merge pull request #350 from sbs2001/trailing-slash-api-fix
+
+Make trailing slash optional in apis","['137d88a1a4eb319259330fdfe4c47dbc95808850', '8ce911a5db986c17239a0f881106b0b736c14459']",True,
+bf86cede368f3853ba3b2d27a99a36bdba623a8b,"Disable schema validation for alpine linux to fix nix test
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['7f5ebf20fda3690c3c3f1d38b1e84158f5e092f1'],False,alpine_linux.py
+111817cfa22e5c36e10a119c39f398102ec9e1a6,"Merge pull request #353 from sbs2001/fix-nix-tests
+
+Disable schema validation for alpine linux to fix nix test","['7f5ebf20fda3690c3c3f1d38b1e84158f5e092f1', 'bf86cede368f3853ba3b2d27a99a36bdba623a8b']",True,
+4933778e4de76f7ea1ffb3fa87c84bd81ee82af8,"Adapt to github upstream data bug
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['259bacb2022a15f768bd0d4a4ab3129ed447ea3c'],False,"github.py, package_managers.py"
+c944101c8b4dac2da9013ea2cf3f5c0b099d1a21,"Sync with main branch and fix latest tests.
+
+* Added incremental time id in import_runner.py
+  to prevent vulnerability id conflicts
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['1c649ea33e7a90b32065564292d4e0f9d9b3cf0d'],False,"import_runner.py, importer_yielder.py, apache_tomcat.py, kaybee.py, nginx.py, postgresql.py, safety_db.py, push.py, models.py, test_apache_tomcat.py, test_debian.py, test_import_runner.py, test_nginx.py, test_postgresql.py"
+c475323b90476c6dfa9c8b95782e9738ca89d266,"Fix tests for import_runner
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['0e0ac7778894c4ecae63b3ac42d6d4ed8fd79d67'],False,test_import_runner.py
+55f1d8419dcde49ab656d3f18fa02aec3c66ac5e,"Remove debug print statement
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['22142c06128c0801c3fbd4b67013b0273cd48cb9'],False,github.py
+b263b479f719d1e36c4c2fd784a2b0161ba4f482,"Make RedHat CVE import more robust
+
+This importer failed at times toward the end of the fetch step when
+reaching (and trying repeatidly) to re-fetch the last page.
+The fix consists in fetching larger batches at once (10K instead of 1k)
+which measn fewer API calls and less risk to be throttled and properly
+handling exceptions and HTTP response codes and breaking rather than
+retrying. This also adds some minimal logging.
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['0a10bb31cd6eb29b1c52ea8a249523c517485f9b'],False,redhat.py
+9fbfe503e5680a69e09c6adf39a7a6b832be6321,"Fix codestyle
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['89a5b01380bec7cd709efa5707a7a13ab968570c'],False,redhat.py
+8ecf9597b400d03af2e00ebb77217d409c5865e9,"Add FIXME comment to Etag function
+
+We are not using etag correctly. Also the function name is misleading
+as we are checking the Etag in this create_etag function
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['fd886594f57eb49040a6df3bc7cdce4d01d2170c'],False,helpers.py
+a852bf374c9d5baf8ebde0b771059764ae20227f,"Fix format
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['ffe12a7084d61cfd9a73f198ada73db5f41a8d63'],False,oval_parser.py
+a3fc3f22b77544d7de43f4850b555bd70153250c,"Fix conflict
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['4e5bc67d2260b1bd87b6b7dd4abf898ab5b32295'],False,test_debian_oval.py
+09c652243306c096d5148c848c2d69759811336b,"Fix syntax error in debain test
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['a3fc3f22b77544d7de43f4850b555bd70153250c'],False,test_debian_oval.py
+6ba22ab71e1f94c1445ac0c7d45bfdfcf474a3d2,"Correct API docs path and fix pytest invocation
+
+The earlier location http://127.0.0.1:8000/api/docs was a 404. As the
+urls.py suggests, the README now reflects http://127.0.0.1:8000/api/schema/swagger-ui/
+
+After the first install, activating the venv is done prior to installing
+pytest, thus the system default pytest is being called. It is either
+required to reactive venv or run pytest via python -m.
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['ff08fd6044110bbd0b7b57010e3622b2fb25c4b6'],False,README.rst
+8094f6e5fcea1023d50c29ae1ae01e291321974f,"Merge pull request #382 from Hritik14/warnfix
+
+Explicity provide lxml parser to beautifulsoup","['ff08fd6044110bbd0b7b57010e3622b2fb25c4b6', '956822f1eaf317c360ccd25b9d83cea8ea8653d3']",True,
+80c65a23953726797b4ce435dab51ef286aa0e4f,"Merge pull request #379 from Hritik14/main
+
+Correct API docs path and fix pytest invocation","['8094f6e5fcea1023d50c29ae1ae01e291321974f', 'e831c5f928879eb8c507eb036a75b737aafcee5a']",True,
+54b7707b10b7d8b51fea8e2236f5ffe6a423beaa,Merge branch 'main' into bugfix,"['4d020a7241654e785df1738ce04ac1700180553a', '3d66b4e82ee31422ab907d3388f739b768ffd2ac']",True,
+c689e9d31bfe5dff8692e3b04503f1226660bb4d,"Merge pull request #389 from Hritik14/bugfix
+
+Make sure vulnerability id is_cve or is_vulcoid","['3d66b4e82ee31422ab907d3388f739b768ffd2ac', '54b7707b10b7d8b51fea8e2236f5ffe6a423beaa']",True,
+d8d07abd5592b9e8051b6217bfe7213455f888c1,"Fix various importer errors
+
+- Update debian importer's schema validation
+- Add tests for msr2019 importer.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['c689e9d31bfe5dff8692e3b04503f1226660bb4d'],False,"debian.py, project_kb_msr2019.py, test_msr_data.csv, test_msr2019.py, test_nginx.py"
+bfa005ece230ada9032c3c0b4a7bab7b59673e0b,"Merge pull request #378 from sbs2001/fix-importer-errors
+
+Fix various importer errors","['c689e9d31bfe5dff8692e3b04503f1226660bb4d', 'd8d07abd5592b9e8051b6217bfe7213455f888c1']",True,
+adf86fdc2a42f93a19f71f40c2ba7350d9d7c220,"Collect more data at NugetVersionApi
+
+- Now the class handles paginated results
+- Added a detailed FIXME comment about an edge case
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['ec3e80074685bc5bdb561077c5c1da6f734b19d2'],False,package_managers.py
+b78cd91ce8cca359442aa633a25858b0125a9ea2,"DEBUG_PROPAGATE_EXCEPTIONS = True
+
+This allows to print stack traces on the stdout
+
+Best practice would be to integrate with sentry, but at least print the stack trace is helpful when trying to deploy this
+
+Signed-off-by: Pierre Tardy <pierre.tardy@renault.com>",['3688d89a88014f2e04475fda0179362e9ab54eae'],False,settings.py
+0b7dc3d263a1a0dddde0e50dff1fa9f21bf68a08,"Fix istio (#395)
+
+* Fix https://github.com/nexB/vulnerablecode/issues/394
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['3f1f4931816388c1c7386c61c8a21751c7bbc186'],False,istio.py
+0af53893dcd5f46531ff9508b0e764003851dd85,"Merge pull request #413 from tardyp/dockerfile
+
+Misc fixes for deploying vulnerablecode on a container platform","['97d4da503eb1960ca01722f72e48ff743804c4a1', 'c2e1b23b4641ebe8678e990e434555ce222eee4b']",True,
+eb524148afa1a9c23f2eb4cdec336879b00d794c,"Fix bulk api in case purl does not exist
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['35f36a78edcbe2d0d36f804b68751035bb2a6774'],False,"api.py, test_api.py"
+2684f0564ba408d87cd0f23d58dc35351a0b6997,"requests_with_5xx_retry: Retry on 5xx errors
+
+Introduced and used a helper function for retries on 5xx errors. This is
+important and some servers like bugzilla.redhat.com return 502 Proxy Error
+which was the cause of https://github.com/nexB/vulnerablecode/issues/398
+
+A ticket has been raised in RedHat here https://redhat.service-now.com/help?id=rh_ticket&table=sc_req_item&sys_id=278239541b1ba010477e43fccd4bcb4a
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['eb524148afa1a9c23f2eb4cdec336879b00d794c'],False,"helpers.py, redhat.py"
+b0329fae15bbb0504d90d12bd99bd2a701504443,"Remove debugging symbols and black -l 100
+
+This finally fixes https://github.com/nexB/vulnerablecode/issues/398
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['aff0065ed4b7d3af2c5fbc1e575eab28327ef235'],False,redhat.py
+9634400d94d97c6503fb347b20b02270b3242fbb,"Merge pull request #418 from Hritik14/fix_redhat
+
+Fix redhat import failure","['eb524148afa1a9c23f2eb4cdec336879b00d794c', 'c90a8717b79591e7fe788c483bf353225cf01e6d']",True,
+f254b0d4ac54b70c648055a7e8eda16c05dce0f9,"Fixes #312 : Added solution for ModuleNotFoundError (#427)
+
+* Added solution for ModuleNotFoundError
+
+Signed-off-by: Pushpit <pushpit07@gmail.com>",['942e1ae67e5fefb69752378d26df12dd232ebd34'],False,README.rst
+4613b12cf0f231d648f05351f72d38756eb25eb5,"Fix tests invocation in upstream tests
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['1c201288be411eddfd3ae0a610377e13ad060e9f'],False,upstream_test.yml
+6f643c90bb7641a6b9768688379e0cb4aa7a5902,"Refactor github importer and fix doctests in tomcat
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['2cbc23e958e5288b3a2e11264c6c1581bf555030'],False,"apache_tomcat.py, github.py, npm.py, ruby.py, test_github.py"
+049f05caf22d2fa4ea5f30dd8471b6aa0837fd49,"Remove debug statements, improve doc, simplify code
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['bda5f0d9ac26e7b207eaaff0c7d37eb338e588ef'],False,"apache_tomcat.py, istio.py, npm.py"
+8aafb631e9c6258b03eddc738eb89cde80260a7f,"Fix ubuntu_usn importer for invalid CVE (#432)
+
+* Fix ubuntu_usn Importer
+
+Signed-off-by: AmitGupta7580 <amitgupta758000@gmail.com>",['73e8baffeb9bb900b2a88f466631bfa225b5051b'],False,ubuntu_usn.py
+9ff0192b3ffbed687f41207b637f4e5fa87f83d8,"Merge pull request #444 from ngi-nix/fix-nix-workflow
+
+Fix nix Github workflow","['8aafb631e9c6258b03eddc738eb89cde80260a7f', '2da0c14f1257b4816d4e4e086a406bd5876e800c']",True,
+cbd6c73f0fe8fb150c682f45746d1d80037de422,"Fix more tests and refactor importer_runner
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['c12e985ec597d69b889e9f89319c4ac82d0a8e68'],False,"nvd.py, models.py, test_debian_oval.py, test_import_runner.py, test_nvd.py"
+92465537b4776a240fca130e009a0cd392eb53a9,"Update fixtures
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['cbd6c73f0fe8fb150c682f45746d1d80037de422'],False,"debian.json, github.json, openssl.json"
+36f4d1dd9a7f3ff9e985ab5f879be05ab9eddb75,"Fix model relations and patch inference in importers
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['92465537b4776a240fca130e009a0cd392eb53a9'],False,"requirements.txt, data_source.py, import_runner.py, archlinux.py, istio.py, kaybee.py, retiredotnet.py, models.py, test_archlinux.py, test_istio.py, test_models.py"
+5999a8a1bc71cf2a6928873b0c268e791834e22f,"Simplify patch inference, fix arch importer bug and remove useless code
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['36f4d1dd9a7f3ff9e985ab5f879be05ab9eddb75'],False,"helpers.py, import_runner.py, archlinux.py, 0003_populate_patched_package.py, test_archlinux.py"
+d70a93176c4e608ae3f57fa5331986f67a02a817,"Fix codestyle
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['5999a8a1bc71cf2a6928873b0c268e791834e22f'],False,0003_populate_patched_package.py
+deb44c68345315085fbab07d2f8b58e93327d08b,"Fix views
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['13eaa01b124397739ab1bb04cc223f5e0a742685'],False,views.py
+7a26cb909302e352c71614da593a298f8a8bef3a,":sparkles: Improve postgres importer
+
+- Postgres now provides references to their own content
+  instead of redhat. Adapt to this.
+- Store scores.
+- Fix bug where the urls where relative, now their absolute
+  version is stored
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['deb44c68345315085fbab07d2f8b58e93327d08b'],False,"postgresql.py, advisories.html, test_postgresql.py"
+663f43e57d8cbd81b19113f9f426da0f2d082fe1,"Fix model properties to avoid dups
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['7a26cb909302e352c71614da593a298f8a8bef3a'],False,models.py
+2744afc7988b61e98ff61cf1e6cf0f4bfdc542b4,"Fix and improve istio importer
+
+- Adapt to Istio advisory's use new syntax for version ranges
+- Collect reference to istio news site
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['d041a2b15a45d2ee9b2e6dcbc62aaa3d83327d33'],False,"istio.py, test_istio.py"
+f9233cce2b02520e7540ee0d4dac91a51586b923,"Fix openssl importer.
+
+The data source has a CVE-2007-5502 which has weird version.Skip it.
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['412a4299960aaecab92890d4622f8e40abfbe749'],False,openssl.py
+114a9701c352c7dee94cf271d8452b3adc508bb2,"Fix debian importer.
+
+Ignores a the invalid version ""3.8.20-4.""
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['65443e402d2169fb6ff373887bd89f40c2296189'],False,debian.py
+254cb96501a534d40c9ae479381ca75607bebad9,":bug: Fix  safetydb and disable it by default (license issue)
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['114a9701c352c7dee94cf271d8452b3adc508bb2'],False,"importer_yielder.py, safety_db.py, test_safety_db.py"
+18d8795455df2574ecad1ee7931128c23edd8f27,"Fix bug in logging
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['c771b008d934e940fdedf1d28cfc1e6e42c0e898'],False,create_cpe_to_purl_map.py
+fa495daab4e45bb6d6443118dc49a2287206187a,"Fix kaybee importer
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['68d3f322d66e21d67b8338419fa9369aee0eb7f2'],False,kaybee.py
+3985a1e09e6cd571907192fa2637d2780417c59f,"Fix tests
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['eec65ab4985af7d8bc92bfde58e30b5829d8cea2'],False,"apache_httpd.py, apache_kafka.py, apache_tomcat.py, nginx.py, npm.py, project_kb_msr2019.py, ruby.py, suse_backports.py, ubuntu.py, package_managers.py, test_apache_httpd.py, test_apache_kafka.py, test_apache_tomcat.py, response.json, easygcm.html, npm.zip, test_elixir_security.py, test_github.py, test_istio.py, test_nginx.py, test_npm.py, test_package_managers.py, test_ruby.py, test_rust.py, test_safety_db.py"
+475bb960ffda897538b431b005d366d812be41e9,"Fix npm importer date manipulation
+
+Signed-off-by: Shivam Sandbhor <shivam@crowdsec.net>",['2fc05f00008d6537f0c7582baf212f5772da62b2'],False,npm.py
+119d883d6f2177478db33061d29e484fb534f896,"Fix recursion in GitHubTagsAPI
+
+A minor bug was introduced by 775aa1d7 which was crashing the nginx
+importer.
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['475bb960ffda897538b431b005d366d812be41e9'],False,package_managers.py
+71a3d750bc492e78298eafc2dfd3da171771ea98,"Update importers to handle VersionResponse
+
+Recent time travel heuristics need published date of versions, thus
+Version dataclass was created. Some of the importers got bugged by this
+new system and were crashing. This fix is a part of # 467
+
+Importers bugged:
+	- nginx
+	- debian_oval
+	- ubuntu
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['119d883d6f2177478db33061d29e484fb534f896'],False,"data_source.py, nginx.py, package_managers.py, test_debian_oval.py, test_ubuntu.py"
+05fcc64f2b48b186b7f742a2adf869b82293b024,"Merge pull request #505 from Hritik14/importer-bugfix
+
+Importers bugfix [nginx, debian_oval, ubuntu]","['475bb960ffda897538b431b005d366d812be41e9', '71a3d750bc492e78298eafc2dfd3da171771ea98']",True,
+7f69f92ef1fac4c2b7cdd566d42c53b5a0377e2a,"Show static files in docker setup
+
+After 312160c docker-compose doesn't load static files as the server
+runs in development mode without DEBUG enabled.
+Also, this commit makes sure it is loud and heard that running via
+docker is not safe.
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['05fcc64f2b48b186b7f742a2adf869b82293b024'],False,"Dockerfile, README.rst, docker-compose.yml"
+9842367de05d456cd94fc0c81e75d8c8dc359f44,"Fix tests
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['ba9051d3de10d7222415225e6559ed0bca1b9a2c'],False,"apache_httpd.py, apache_kafka.py, apache_tomcat.py, nginx.py, npm.py, project_kb_msr2019.py, ruby.py, suse_backports.py, ubuntu.py, package_managers.py, test_apache_httpd.py, test_apache_kafka.py, test_apache_tomcat.py, response.json, easygcm.html, npm.zip, test_elixir_security.py, test_github.py, test_istio.py, test_nginx.py, test_npm.py, test_package_managers.py, test_ruby.py, test_rust.py, test_safety_db.py"
+9d359f28eaaaaa02a214c6bf27116e15c37eb559,"Fix npm importer date manipulation
+
+Signed-off-by: Shivam Sandbhor <shivam@crowdsec.net>",['80e3cf026c06574d66c49bcdfc33f874165cd134'],False,npm.py
+047398e74c7bad90413712354e86acc33b22ddec,"Fix recursion in GitHubTagsAPI
+
+A minor bug was introduced by 775aa1d7 which was crashing the nginx
+importer.
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['9d359f28eaaaaa02a214c6bf27116e15c37eb559'],False,package_managers.py
+9053ba9586d6db92837d2df4cf81023c06aff5fa,"Update importers to handle VersionResponse
+
+Recent time travel heuristics need published date of versions, thus
+Version dataclass was created. Some of the importers got bugged by this
+new system and were crashing. This fix is a part of # 467
+
+Importers bugged:
+	- nginx
+	- debian_oval
+	- ubuntu
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['047398e74c7bad90413712354e86acc33b22ddec'],False,"data_source.py, nginx.py, package_managers.py, test_debian_oval.py, test_ubuntu.py"
+369897fb947584e44581df075c6e76638737f2ca,"Merge pull request #497 from Hritik14/docker_bugfix
+
+Improve Docker configuration, add Makefile and refactor CI tests","['05fcc64f2b48b186b7f742a2adf869b82293b024', 'b69dee284130a855178868df6f5e122186903928']",True,
+34c83a716695ba3372a4d65a2e51f5adddebe53e,"Merge pull request #508 from Hritik14/fix-githubtagsapi
+
+Use svn to collect tags in GitHubTagsAPI","['7d3df72496c76cc5ca88bc1a4eb4c45f6effce79', '57a461066b8a358ca1ec7fe688234ce6eaff7405']",True,
+273153d2de9af3ae7654ba1899ad7763d6cc4eda,"Add doc tests on CI and fix linter errors
+
+Signed-off-by: Ayan Sinha Mahapatra <ayansmahapatra@gmail.com>",['f9dd3e288f6c1c9a4948c42ad2bd012ea226cf66'],False,"docs.yml, doc8_style_check.sh, conf.py, docker_installation.rst, sources.rst, add_new_importer.rst"
+db33279add35ad66cafa3728179108b6aa070cf5,"Fix GitHub CI badge (#539)
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['c2f0c1c47f91271a11093a9d68c670bf4002f7bd'],False,"main.yml, README.rst"
+85cb6026bf4be3029442a69af8bf09aceb61ec8c,"Ensure Debian test are passing (#538)
+
+* Ensure Debian test are passing
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Build docs with Python 3.7
+
+Since we use Python 3.8 everywhere, let's use it there too.
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Fix debian tests
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>
+
+Co-authored-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['db33279add35ad66cafa3728179108b6aa070cf5'],False,"docs.yml, debian.py, test_debian.py"
+2519f6560fc6a574d7664799c190280a9c1ed5a5,"Merge pull request #548 from Lawful2002/link
+
+Fixed the broken Docker Installation Link","['bd1dfe5bcf3a65ce5340f5653d26e9492c44bc21', 'c11e44efdd8443de35c80aa92271d1fe4fa62994']",True,
+64d52ecd0da400986857160e3c64d1099eb00c86,"Stop using drf-spectacular (#542)
+
+- Use Redoc instead of swagger
+- Don't rely on CDN
+- Fix docs for bulk_search API
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['2519f6560fc6a574d7664799c190280a9c1ed5a5'],False,"requirements.txt, api.py, api_doc.html, base.html, views.py, settings.py, 9bcbfb5fe4bb244b68d4.worker.js.LICENSE.txt, 9bcbfb5fe4bb244b68d4.worker.js.map, api_schema.yaml, cf2d816ec177c47e23d0.worker.js.LICENSE.txt, cf2d816ec177c47e23d0.worker.js.map, font.css, JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2, JTUSjIg1_i6t8kCHKm459Wlhyw.woff2, KFOlCnqEu92Fr1MmWUlfBBc4.woff2, KFOmCnqEu92Fr1Mu4mxK.woff2, redoc.lib.js, redoc.lib.js.LICENSE.txt, redoc.lib.js.map, redoc.standalone.js, redoc.standalone.js.LICENSE.txt, redoc.standalone.js.map, urls.py"
+a0a733a302cc4b96cfb6c2d7a81ae0c84f6abdca,"Fix several problems with the nix setup. (#546)
+
+* Fix several problems with the nix setup.
+
+Signed-off-by: Rolf Schröder <rolf.schr@gmail.com>",['64d52ecd0da400986857160e3c64d1099eb00c86'],False,"flake.nix, test-import-using-nix.sh"
+3388f885e220434a4c08476601ebc9853c89967a,"Fix istio importer by skipping  UI metadata files. (#570)
+
+Signed-off-by: Shivam Sandbhor <shivam.sandbhor@gmail.com>",['4677f70c654a15da529a80d19d7de1ca013ef8eb'],False,istio.py
+d1ab7e3eda23e6b21117fc4bd33d896c38cb55f3,"fix typing hint errors(pyright) && format with black
+
+Signed-off-by: 司芳源 <sify1221@gmail.com>",['3388f885e220434a4c08476601ebc9853c89967a'],False,package_managers.py
+7fc4731fe5b0101e6de9119661a0dc9b261ac164,"Fix deprecated Django API
+
+Signed-off-by: Yassine Ilmi <9211413+yilmi@users.noreply.github.com>",['3388f885e220434a4c08476601ebc9853c89967a'],False,models.py
+ed2131656b1b3030c2f9eb28e25c10dbbedc8e1d,"Merge pull request #592 from yilmi/fix_django_ugettext_lazy_deprecation
+
+Fix deprecated Django API
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>","['3388f885e220434a4c08476601ebc9853c89967a', '7fc4731fe5b0101e6de9119661a0dc9b261ac164']",True,
+fa740257925dff85b43f468217b515c3ede6abde,"Implement improver
+
+This is work in progress, there are a few bugs and a few fixmes as well.
+Everything will be replaced before the final commit
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['f78391541793ef0344642f3788ee8b15110cdbed'],False,"data_inference.py, data_source.py, import_runner.py, nginx.py, improve_runner.py, __init__.py, nginx.py, improve.py, models.py"
+5fa3cd5d3acbf861b67f85245a286a10805b2743,"Use new Advisory model for importers
+
+Importing Advisory data is now 2 step process.
+1) Import Advisory
+2) Create relations (default improver)
+
+importers are now required to return AdvisoryData instead of Advisory.
+The data contained inside AdvisoryData is converted into a model named
+Advisory and then saved into the database. This will be useful later
+for improvers to work on existing Advisories.
+All the relationships for the Advisories are generated using a default
+improver at improvers/default.py.
+
+NOTE: There are errors in the UI due to models.py
+    # TODO: Cannot resolve keyword 'resolved_vulnerabilities' into field
+    # make vulnerabilities and resolved_vulnerabilities use the `fix` flag of PackageRelatedVulnerability
+
+Knows defects (in current PR):
+-[ ] UI break (see above)
+-[ ] might crash in multiple imports / improves
+-[ ] No improver than default improver is implemented yet
+-[ ] normalized function of ``AdvisoryData`` has no body
+-[ ] nginx importer still has remains of set_api etc
+-[ ] Inference -> AdvisoryData encapsulation
+-[ ] Duplicated data in database
+-[ ] ???
+
+Knows defects (to be solved in different PR):
+-[ ] inconsistent naming - will be resolved in a different PR
+-[ ] unordered imports
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['fa740257925dff85b43f468217b515c3ede6abde'],False,"data_inference.py, data_source.py, import_runner.py, nginx.py, improve_runner.py, __init__.py, default.py, improve.py, models.py"
+43c8ab975ab9e1d5259f8ed471885327d15d8669,"Fix UI break
+
+Recent model changes break the UI as now the PackageRelatedVulnerability
+contains a ``fix`` flag to mark the relationship as a fix.
+This is leveraged to eliminate multiple columns like patched_package or
+vulnerable_package.
+
+Known defects (in current PR):
+-[x] UI break
+-[ ] might crash in multiple imports / improves
+-[ ] No improver than default improver is implemented yet
+-[ ] normalized function of ``AdvisoryData`` has no body
+-[ ] nginx importer still has remains of set_api etc
+-[x] Inference -> AdvisoryData encapsulation
+-[ ] Duplicated data in database
+-[ ] ???
+
+Knows defects (to be solved in different PR):
+-[ ] inconsistent naming - will be resolved in a different PR
+-[ ] unordered imports
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['08605cd06430d590e7169f988caea6a41416a0f1'],False,"models.py, views.py"
+c3f34e9381a03107a0153adbee9929aad87b9b08,"Use OSV design for AffectedPackages
+
+AffectedPackges now contains all affected versions and one fix version.
+This is inspired from the design documented at https://docs.google.com/document/d/1sylBGNooKtf220RHQn1I8pZRmqXZQADDQ_TOABrKTpA
+Under ""Format Overview"", along the lines of:
+
+    ""affects"": {
+            ""ranges"": [ {
+                ""type"": string,
+                ""repo"": string,
+                ""introduced"": string,
+                ""fixed"": string
+            } ],
+            ""versions"": [ string ]
+        },
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['96a8cb351b9525261c00002466410baa2add1f6f'],False,data_source.py
+c2ef79c9d8cf448c88cea559f12b7cf806937ed9,"Modify nginx importer to adopt OSV design
+
+This is still not perfect because univers is not stable yet. The
+uncertainty about the structure of version_specifier needs to be
+resolved. As of now, there are many redundant AffectedPackage objects
+which would be gone after https://github.com/nexB/univers/issues/8 is
+fixed.
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['c3f34e9381a03107a0153adbee9929aad87b9b08'],False,nginx.py
+7c1e24c258a2828307631e1b3d94988bf7acef3e,"Assert Inference fields
+
+There must be an affected or fixed purls if there's no vulnerability id.
+Otherwise, when vulnerability id is present, any (except summery for now)
+could be present. It does not make sense to neither have vulnerability id
+nor affected or fixed purls, such relation would be meaningless.
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['c2ef79c9d8cf448c88cea559f12b7cf806937ed9'],False,"data_inference.py, default.py"
+c60e030bb33bae906a351fba7368014bc15696e4,"Hotfix parse_version from univers
+
+https://github.com/nexB/univers/issues/10
+- parse_version() should accept None and empty strings
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['2694c4ed97f9ea855db6f69cc946d09f5525873e'],False,"data_source.py, helpers.py"
+18e3d4b92712574b57a6159e9aa46d401edf234b,"Refactor according to code review on 2021-12-04
+
+The following suggestions were acception plus some code refactor
+
+https://github.com/nexB/vulnerablecode/blob/main/vulnerabilities/migrations/0003_populate_patched_package.py
+Is this hand written migration ? Why ? I'm resetting migrations, this is breaks on changes in univers
+- > move to init migration, provide data dump
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/import_runner.py#L73
+- [x] name should be inside the importer class
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/import_runner.py#L108
+- [ ] Advisory. get or create in the loop itself
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/import_runner.py#L95
+- [x] Make it a list (or iterable is better), not set
+
+class AdvisoryData:
+""""""
+This data class expresses the contract between data sources and the import runner.
+""""""
+
+vulnerability_id: Optional[str] = None
+summary: str = None
+affected_packages: List[AffectedPackage] = dataclasses.field(default_factory=list)
+references: List[Reference] = dataclasses.field(default_factory=list)
+date_published: Optional[datetime.datetime] = None
+
+- [x] Use this to create an Advisory model and store List objects as json
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/data_source.py#L99
+- [x] affected_version_range
+
+- [x] https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/data_source.py#L120
+VersionRange.version_class to get the Version subclass
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L71
+- [ ] docify this
+
+- [x] advisory_data should return an iterable as a contract
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L77
+- [x] yield better
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L158
+- [ ] use getattr
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L162
+- [x] only for nginx advisory
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L188
+- [x] return a dict and use ** on 77
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L99
+- [x] _,_,fixed_versions =
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L86
+- [x] how does a paragraph look
+
+https://github.com/Hritik14/vulnerablecode/blob/ee0dba45f1d5b6680e121d91ce59b050325a5e67/vulnerabilities/importers/nginx.py#L116
+- [x] remove branch qualifier
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['5ec989dbc86c14335bf0cbffceb8dbe407c8fbae'],False,"data_source.py, import_runner.py, nginx.py, 0001_initial.py, models.py"
+c3e71f4984b1be1077f9d4f613fac75d0d38ac6c,"Fix few tests to recent structure, dump ugettext_lazy
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['e3a1ea59337c84dfacd0fb068d64d8e90fed6b0d'],False,"nginx.py, default.py, models.py, test_helpers.py"
+bd390d4f6eac7f438b6163b717f5a39abf88957c,"Add get_fixed_purl in AffectedPackage, fix from_dict
+
+from_dict is a factory, should be a classmethod
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['86d175e436139114925ca34266ca68e41f11afea'],False,data_source.py
+6ab6f06040271f09ec3bc083f253fc3d363188d5,"Add FIXME about wrong filters in PackageSearchView
+
+The entire view is messed up. Will probably need a rewrite
+
+Co-authored-by: Philippe Ombredanne <pombredanne@gmail.com>
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['bd390d4f6eac7f438b6163b717f5a39abf88957c'],False,views.py
+33d0c0d9ce25c97289013f1f4375dddc35c53559,"Teeny weeny fixes
+
+Fixes are in accordance with the final review for this PR done at :
+https://github.com/nexB/vulnerablecode/pull/525#pullrequestreview-862081431
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>
+Co-authored-by: Philippe Ombredanne <pombredanne@gmail.com>",['6ab6f06040271f09ec3bc083f253fc3d363188d5'],False,"data_source.py, nginx.py, improve_runner.py, __init__.py, default.py, improve.py, models.py"
+344921701c008edffa4d0551a0674a1906f34285,"Correct notes for cvssv3.1_qr
+
+Fixes: https://github.com/nexB/vulnerablecode/issues/550
+
+Signed-off-by: keshav-space <keshav6240@gmail.com>",['67fc00e5a8dbdf690f1c1b0d627da0d06322adb9'],False,severity_systems.py
+14850eaf994261a38bfa4c9378623491b5c74b33,Fix title,['46c6aba4150999aaa3790004aed78fcd8053066e'],False,index.rst
+7c3d7a8a0d7c08db14f1b37120313411453e225c,"Dump importer_yielder in favor of IMPORTER_REGISTRY
+
+IMPORTER_REGISTRY is neater and does not do any magical string -> object
+conversion. The registry looks more in sync with improvers.
+Fixes: https://github.com/nexB/vulnerablecode/issues/501
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['14850eaf994261a38bfa4c9378623491b5c74b33'],False,"admin.py, data_inference.py, data_source.py, import_runner.py, importer_yielder.py, __init__.py, nginx.py, improve_runner.py, __init__.py, import.py, improve.py, models.py, test_importer_yielder.py"
+12c842e20f95be78ab891bdac0d749257d726560,"Remove etags
+
+Etags are meant for transient usage in browsers and are not meant for
+any long term usage.
+Fixes: https://github.com/nexB/vulnerablecode/issues/321
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['7c3d7a8a0d7c08db14f1b37120313411453e225c'],False,"helpers.py, test_helpers.py"
+7e198e4380d42116b0ccb53e8921d2f71ff69c78,"fix the black format
+
+Signed-off-by: Ziad <ziadhany2016@gmail.com>",['4ebaa4806b81c2af2f4b951c8fdf2048c36d2ea5'],False,"test_view.py, views.py"
+d98e37f3a01df733c81098c2ec07d7b422b7c8c3,"fix Presentation url
+
+Signed-off-by: Ziad <ziadhany2016@gmail.com>",['7e198e4380d42116b0ccb53e8921d2f71ff69c78'],False,README.rst
+dcc9d6ff10534be8ffa1b2ef4925445a9079f6a8,"fix doctest NameError
+
+Signed-off-by: 司芳源 <sify1221@gmail.com>",['07b1f92fc777f71cfae49923d749669fb354188b'],False,package_managers.py
+4cc6b4fbe930fcb7b0f42946bb9d40c2d3206d47,Merge branch 'main' of https://github.com/ziadhany/vulnerablecode into view_fix,"['d98e37f3a01df733c81098c2ec07d7b422b7c8c3', '28f565918d70a478ea1bacbe27e250e31fde191d']",True,
+a63826e7493495db9ab2215c5ca2360a12b1f770,"fix view ,add a test and sort imports.
+
+Signed-off-by: Ziad <ziadhany2016@gmail.com>",['4cc6b4fbe930fcb7b0f42946bb9d40c2d3206d47'],False,"test_view.py, views.py"
+d4f38aa9398a2ea243f7f13fe4af9df07932ef8a,"Merge pull request #618 from ziadhany/view_fix
+
+validation for page_no and fix presentation url .","['28f565918d70a478ea1bacbe27e250e31fde191d', 'a63826e7493495db9ab2215c5ca2360a12b1f770']",True,
+09dcbbf325bf42a1ee6df8b22ca67af992bd10c6,"Merge pull request #635 from ngi-nix/fix-nix-setup
+
+Fix nix setup","['4390b6aca872cbde378516199f143fa11e64bc5a', 'f46de02f598f575aca7cf30bfaed07ffaf2d5aaf']",True,
+2e235a27725127c56e41f67e850781326d093b3e,"Fix documentation link in documentation
+
+Fixes: https://github.com/nexB/vulnerablecode/issues/637
+
+Reported-By: Keshav Priyadarshi <git@keshav.space>
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['71ec5cd125b4acc89cb38a725f0d14a22fb98188'],False,contributing.rst
+80579a5bc6014fd8ceaad338062eb4c6797edfc8,"Make sure fixed purl is optional in Inference
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['2f9b863a21a9acddc2183b8d41d864991445bf90'],False,"improve_runner.py, improver.py"
+f9f4bc04a98f66ecf624cd6acd593e5108e53291,"Merge pull request #639 from Hritik14/bugfix
+
+Make sure fixed purl is optional in Inference","['2f9b863a21a9acddc2183b8d41d864991445bf90', '80579a5bc6014fd8ceaad338062eb4c6797edfc8']",True,
+104c76071e968454dea220c4cc58c60ca0ca0d89,"fix nix
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['a69c886d2524f5080804b25d153e5d5dd0258e59'],False,"importer.py, default.py"
+986e75f9a714039cc4f11516032d87b0aafee790,"Fix github improver
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['a59b5e411d8803abbf41d824ee7c6d9f1b752974'],False,"helpers.py, github.py, package_managers_2.py, gem.json, test_helpers.py, test_package_managers_2.py"
+497b5fdc85c6277824623e0336d2c4378581b863,"Fix API crash due to model changes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['a59b5e411d8803abbf41d824ee7c6d9f1b752974'],False,api.py
+705e7929dfb9af4264952b78b654fc6440468330,"Streamline stripping V prefixes in versions
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['986e75f9a714039cc4f11516032d87b0aafee790'],False,github.py
+a30166fcd978302769b6c407b37c62a4047c6daf,"Merge pull request #663 from TG1999/fix/github_improver
+
+Fix github improver
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>","['a59b5e411d8803abbf41d824ee7c6d9f1b752974', '705e7929dfb9af4264952b78b654fc6440468330']",True,
+77a81c8f402297e0d7a4e937f6e17052b53fb74d,Merge branch 'main' into fix_api,"['497b5fdc85c6277824623e0336d2c4378581b863', 'a30166fcd978302769b6c407b37c62a4047c6daf']",True,
+a203e9483bd3ecd9377eb97094d7f351ddc100a2,"Merge pull request #669 from TG1999/fix_api
+
+Fix API crash due to model changes
+
+Reference: https://github.com/nexB/vulnerablecode/issues/668
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>","['a30166fcd978302769b6c407b37c62a4047c6daf', '77a81c8f402297e0d7a4e937f6e17052b53fb74d']",True,
+93ba3061abc45f0eaf2fbe83e0307759ecda87b8,"Merge pull request #671 from TG1999/test_fix_api
+
+Add tests for checking the API","['a203e9483bd3ecd9377eb97094d7f351ddc100a2', '3a3ea06556411f1fda6418bf9285c9e26ba623e6']",True,
+8c7ecc811494de319e0df44d17daf85b7f5cc44c,"Fix improver framework not accepting severities
+
+Signed-off-by: Hritik Vijay <hritikxx8@gmail.com>",['93ba3061abc45f0eaf2fbe83e0307759ecda87b8'],False,improve_runner.py
+39ef4878f9ff1d147a3b46def5403f77137f96df,"Merge pull request #684 from Hritik14/bugfix
+
+Fix improver framework not accepting severities","['93ba3061abc45f0eaf2fbe83e0307759ecda87b8', '3a38e6b73b0a04156c8f77e1fa23bc953f29b387']",True,
+4feb5506b5ad84caaadc6652d6eacf8590db47af,"Fix typo
+
+Reported-by: Hritik Vijay <hritikxx8@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['86da080ff616ddc98814d6fee074d98fc0909c7d'],False,CHANGELOG.rst
+f2de3d1a8714abebe62dd6b0042e0d14e361d260,"Improve logging
+
+* A logging statement was not formatted correctly.
+* Also prefix with _ an unused variable
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['5e96d5c4f33a8d1febdc0b2cea3c5276e1e3d4be'],False,improve_runner.py
+d74425f5824719b7d20c5c92bcf86541360a75d5,"Add missing format string prefix
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['da7faf7094cbec3a0dede586ab470a5b0d2adf5a'],False,models.py
+39b5fab295bae115de992a5b98d41dabd1b01a01,"Use new file-based testing and env-based regen
+
+To regen expected files, set VULNERABLECODE_REGEN_TEST_FIXTURES to any
+value
+
+Reference: https://github.com/nexB/vulnerablecode/blob/a7545e7e6fa94d3a3f6382bfab42f90a72bce7d7/vulnerabilities/tests/util_tests.py#L36
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['f889546e8dd45492c9c8c082350c2071b508bdda'],False,test_openssl.py
+5a457fcf0cbb7c62502e43fb8b53d4517dd87c3f,"Fix docstring typo
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['eb6913860e64da1a807fcda261da53599bb48897'],False,helpers.py
+249c562ee26f4f3bfc1a89851d5823e8ce8f7f7e,"Fix typing error (#696)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['8a81708c4daa5b1c6c35b4da945532b39c8acd1b'],False,default.py
+47f6ae62d919fff5094b960c1f56bc0c6b8b4be3,"Merge pull request #693 from TG1999/fix/default_improver
+
+Allow default improver to improve without affected packages","['d1f21983d39592b7470a1db038d66c0031053b30', 'bc94910128150304fe8d9cba0d4c4c3da53724bf']",True,
+f563c64421bcf127cb186666a3b164c36f340b2c,"Merge pull request #700 from TG1999/ui-fix
+
+Fix UI","['554384bb9a906c5c16e144f9adc17173813ac523', '02b204a9646cb4f617520db8f8cde6e42d26dfa9']",True,
+7810a7f8661e684f13c984d4d4100b89b0ab05a0,"Fix typos in CHANGELOG
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['f563c64421bcf127cb186666a3b164c36f340b2c'],False,CHANGELOG.rst
+14b814ce4f09e9ffef86b6f47acf96d557233b99,"Merge pull request #724 from keshav-space/fix_typos
+
+Fix typos in CHANGELOG","['f563c64421bcf127cb186666a3b164c36f340b2c', '7810a7f8661e684f13c984d4d4100b89b0ab05a0']",True,
+2aede6fa7caf9d273527ae1106e2d9bb0c538942,"Infinite loop fix
+
+Signed-off-by: mark <mark@threatrix.io>",['14b814ce4f09e9ffef86b6f47acf96d557233b99'],False,"package_managers.py, test_package_managers.py"
+4a5f3206663e16c0686739fa83fca2978e6818b6,"Migrate redhat importer
+
+Fix severities in UI
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['75b2920cbc4041a40a52a35b7aada385137e503e'],False,"__init__.py, redhat.py, rpm_utils.py, vulnerability.html, conftest.py, RHSA-2022:1437.json, RHSA-2022:1439.json, bugzilla-2075788.json, bugzilla-2077736.json, redhat-expected.json, redhat-input.json, test_redhat_importer.py"
+ee1f0cfcc6e4e04f15b4e4287a671f2fbc420f0f,"Fix pysec importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['f71776b4436730b5f0778b54a3657e92ea348bb1'],False,"pysec.py, pysec-expected-1.json, pysec-expected-2.json, pysec_test.json, pysec_test_1.json, pysec_test_2.json, test_pysec.py"
+b585b1690177edf554ba474166a501690b421306,"Merge pull request #739 from TG1999/fix/pysec
+
+Fix pysec importer","['f71776b4436730b5f0778b54a3657e92ea348bb1', 'ad969355914bd9fd84eb7c4937810c5712e48c22']",True,
+a0dc279a0f04e826e570e200639deb3c1201db29,"Reference: https://github.com/nexB/vulnerablecode/issues/729
+
+Fix severity model
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['b585b1690177edf554ba474166a501690b421306'],False,"improve_runner.py, 0014_remove_duplicate_severities.py, 0015_alter_vulnerabilityseverity_unique_together_and_more.py, models.py"
+1717f51612b61913dbaf74373bd738a2fb86ab61,"Merge pull request #731 from TG1999/fix_severity_model
+
+Fix severity model","['b585b1690177edf554ba474166a501690b421306', 'f5222a1fb309b8500ada609bb600d3ec0a801bb6']",True,
+d7627efa36a726d80f52fb200b40f2c6a8147147,"Merge pull request #757 from TG1999/fix_redhat_importer
+
+Put network calls in try/except block for redhat importer","['d1686dbf3f36e5a52a261be69e047df2e9d08e24', '31ba98af9ea7bddd2104f8c3fd662472dc265b46']",True,
+5b56e9e9a9186a16ef7e76571e810a090140ce2f,"Merge pull request #762 from armijnhemel/doc_fixes_06062022
+
+doc: Adviory -> Advisory","['d7627efa36a726d80f52fb200b40f2c6a8147147', '831869023de689d5089d9a0c7b41cca01f2203e9']",True,
+31d92047281078930e5290b90383a09f233d577e,"Fix failing test
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['1460630122f629fc50efa7847220a66db42a8c43'],False,test_fix_api.py
+160ac879212c7d636c203c7ac689707d49b48c18,"fix the test
+
+Signed-off-by: Ziad <ziadhany2016@gmail.com>",['9ac6fa2a96181e91adc1555d9fc704f2faf34726'],False,"osv.py, pypa.py, pysec.py, test_osv.py, test_pypa.py, test_pysec.py"
+55f49316d9f1e7bb3b394a9a947659c7d30b3c60,"dedupe the aliases and fix the test .
+
+Signed-off-by: Ziad <ziadhany2016@gmail.com>",['ed28ebe60a282f2628f64638480a60b0a7867e1f'],False,osv.py
+e538976ee63484b831f1623fb2d9368081824c1f,"Add fixed packages in packages endpoint
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['59406a5221d277f25a4b87a6203f07ec4853958a'],False,"api.py, models.py, test_fix_api.py"
+64d9dd7d33d856da660df41a4ecca30d94024e9b,"Add filter for fixed packages in vulnerabilities endpoint
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['e538976ee63484b831f1623fb2d9368081824c1f'],False,"api.py, models.py"
+49052d666e06197b07bf5409b09cbf665589578c,"Merge pull request #784 from TG1999/api_fixed_packages
+
+Add fixed packages in packages endpoint","['59406a5221d277f25a4b87a6203f07ec4853958a', '1edfb93e752a9a480cf40fe2ddf160d31987ca03']",True,
+8ccfacc7ec96f21a3d26487397a9d72d6cb86b9a,"Fix failing tests, sort search results, add search box to search results pages
+
+Reference: https://github.com/nexB/vulnerablecode/issues/798
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['5a63a195dd13ccda1cc0a6aa3ee33186a94a2ee2'],False,"index.html, package_update.html, packages.html, vulnerabilities.html, views.py, custom.css"
+88d9df7220f4b50f522520b895f22dbfd06c1a1d,"Work on package sorting and fixed-package identification
+
+References: https://github.com/nexB/vulnerablecode/issues/798
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['2956bc2dbce8c6ceb97400449c0192b31ade6ba8'],False,"navbar.html, package_update.html, packages.html, vulnerabilities.html, vulnerability.html, views.py, custom.css"
+b63d0c02c597daa164630bdd386a871463fc2916,"Merge pull request #830 from TG1999/fix_pagination
+
+Paginate initial listings to display a small number of or records","['2670b03166a90fd6fc1df1358c3772d874762676', '0c896aad916e0577f756c63329d2148ae1ba0b3e']",True,
+050d58090a0cb56e37f9d6af776533345fa75479,"Move fixed_packages to vulnerabilities in packages endpoint #809
+
+Reference: https://github.com/nexB/vulnerablecode/issues/809
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['b63d0c02c597daa164630bdd386a871463fc2916'],False,"CHANGELOG.rst, api.py, test_fix_api.py"
+479111359070cc09010bde343e210306c4b14e40,"Merge pull request #831 from TG1999/fixed_package_in_affected_by_vulnerabilities
+
+Add fixed packages in vulnerabilities details in packages endpoint.","['b63d0c02c597daa164630bdd386a871463fc2916', '050d58090a0cb56e37f9d6af776533345fa75479']",True,
+ae871fbba453eb1e22a1c638f428ffd19d285a5e,"Add affected/fixed package data to vulnerability details
+
+Reference: https://github.com/nexB/vulnerablecode/issues/798
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['441852f29a3d43b5ccf898ebdb1c405cb6e402d5'],False,"base.html, index.html, navbar.html, package_update.html, packages.html, vulnerabilities.html, vulnerability.html, views.py, settings.py, custom.css, jquery-3.6.0.js, jquery-3.6.0.js:Zone.Identifier, jquery-3.6.0.min.js, jquery-3.6.0.min.js:Zone.Identifier"
+96d446f3cf9c57d06ea951bf8c306f3f8e65fef6,"Fix typos in API
+
+And fix typos in CHANGELOG
+Reference: https://github.com/nexB/vulnerablecode/issues/854
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['0ff68fc64f100c1016620e04a9ad2ae21c4e23db'],False,"CHANGELOG.rst, api.py, test_fix_api.py"
+41f3527b23bff1f958b5e067d3d3aab5eb44cfff,"Merge pull request #853 from TG1999/fix_typos
+
+Fix typos in API","['0ff68fc64f100c1016620e04a9ad2ae21c4e23db', '96d446f3cf9c57d06ea951bf8c306f3f8e65fef6']",True,
+233f747a083f837324b150bb7630abbc5cd9da61,"Replace style settings with classes, fix Jinja tag indentation
+
+Reference: https://github.com/nexB/vulnerablecode/issues/798
+Reference: https://github.com/nexB/vulnerablecode/pull/813
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['e84a76e9489d4656e0852672676ff3625572e8c8'],False,"forms.py, base.html, index.html, package_update.html, packages.html, vulnerabilities.html, vulnerability.html, custom.css"
+c902c2f7cf7c66b39e8803a28335675f71a5e5ed,"Fix wrapping, position of Alias records in Vulnerability details templates
+
+Reference: https://github.com/nexB/vulnerablecode/issues/864
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['4ec2d93f1ffba1fde4a3b76dc0e9a0d5a9ba8279'],False,"vulnerability.html, custom.css"
+a7e720e38b70956a01e351a545633dd544fa981f,"Add is_vulnerable property in fixed packages
+
+Reference: https://github.com/nexB/vulnerablecode/issues/867
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['e0731adc9d57255729db2d5147004d7423e1397c'],False,"CHANGELOG.rst, api.py, models.py, test_fix_api.py"
+d72c3b9e390fcc109076f30869e89a33f8e5d8ca,"Merge pull request #869 from TG1999/is_vulnerable_package
+
+Add is_vulnerable property in fixed and affected_packages","['e0731adc9d57255729db2d5147004d7423e1397c', 'a7e720e38b70956a01e351a545633dd544fa981f']",True,
+13027617316d99e57a26e4ef095b816945f0a07a,"Report Vulnerability severities correctly #904
+
+* Add ""severities"" property to Vulnerability
+  This is traversing severities through the references.
+* Remove the ""severities"" property from a VulnerabilityReference.
+* Also use ""Fixed by packages"" #903
+
+Reference: https://github.com/nexB/vulnerablecode/issues/903
+Reference: https://github.com/nexB/vulnerablecode/issues/904
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['f82bbc30f119f0c724e6fea52de9ea76cff92d8e'],False,"models.py, vulnerability_details.html, test_view.py, views.py"
+51495430014b186cb3b2c3b08aa0ed979a47cab7,"Fix migrations
+
+There was a mistake commit in the history where the unique_together
+of VulnerabilityReference was reordered without creating a new migration
+This is fixing this to ensure we can migrate correctly
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['6688cb6104f3655f413c2c82e3a4fb4ed215c046'],False,"0026_alter_vulnerabilityreference_unique_together.py, 0027_alter_vulnerabilityreference_url.py"
+de614055dd14f5bcd6811cd57e4f3e4d83419008,"Fix UI wrap issue in Reference table #916
+
+Reference: https://github.com/nexB/vulnerablecode/issues/916
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['3856f05578042b974ff1586498b6795fa2b3c4b1'],False,"vulnerability_details.html, custom.css"
+08f9fac1cfb77c3c61c57301415908e8a6271478,"Merge pull request #919 from nexB/916-ui-bug
+
+Fix UI wrap issue in Reference table #916","['3856f05578042b974ff1586498b6795fa2b3c4b1', 'de614055dd14f5bcd6811cd57e4f3e4d83419008']",True,
+51051b4478b709ba74793d7c1217b36c89871426,"Merge pull request #921 from TG1999/fix/918
+
+Bump package-url version #918","['08f9fac1cfb77c3c61c57301415908e8a6271478', 'd3bb7652c1736f82164e03481444d56816467cc3']",True,
+664af89e85b17b9e31fb7154afc15304986f44db,"Fix import sort #597
+
+Reference: https://github.com/nexB/vulnerablecode/issues/597
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['feb1663e316fd9903cd1401cc298ef7905cea2ca'],False,"__init__.py, archlinux.py"
+b6c59d695a58dcabe6cf6ebda8b5f2cbecae78a6,"Merge branch 'main' into 597-migrate-archlinux and fix merge conflict
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>","['ad3ebeb9ff80802ab582c22f06ccce5d2c8b00a6', '6bad93197d1926020f143d1bae7ccc3cb96c087d']",True,
+0d1520fb6cc54ce6f15872683cba8b334a24a7aa,"Fix gitlab importer #958
+
+Reference: https://github.com/nexB/vulnerablecode/issues/958
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['92eb01aecd4a9c729a5f043eb69d80a87e1e1455'],False,"requirements.txt, setup.cfg, gitlab.py"
+d96e20f3aa7651cce6efd31e9fbca9a1d6a2e427,"Merge pull request #959 from TG1999/fix_gitlab_importer
+
+Fix gitlab importer","['92eb01aecd4a9c729a5f043eb69d80a87e1e1455', '0d1520fb6cc54ce6f15872683cba8b334a24a7aa']",True,
+058d285be6a116cf780bee783b937e8745533f80,"Enable selectively the debug toolbar
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['5cbf640b7ff82be181430663353c48ec7533605c'],False,"setup.cfg, settings.py, urls.py"
+0f2e18a4abc092c5f29b369c4a0c6b0b81fa4fbe,"Index the fix field
+
+And chain querysets.
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['dd3522c39076a7db4e9c2a917dd7d2aeed20ab91'],False,"0028_alter_packagerelatedvulnerability_fix.py, models.py"
+91aa5a1c7f7c0b17b4942a94a2c592c55f7f5682,"Fix DebianVersionAPI
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['27a03a2f1889ae2f0f32b321a0eb128a1bd62413'],False,package_managers.py
+9045c76a13778f5b54b98b9e45908110cca80b5f,"Fix LaunchPadVersionAPI
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['ad97ddf4a303eb66b68b1cc06bf44e151e181f97'],False,"__init__.py, oval.py, package_managers.py"
+38483f4b39e93fa4c7e3d63162b4e36be9b67fec,"Fix formatting tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['5922960a71923d8b0c90c74a5bf7ec719c3766fa'],False,importer.py
+63e871fb847d8cd307a774cd53b2a3f213d9d9df,"Move API test fixtures under test_data
+
+Also remove unused imports
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['ba4a1158438d67d3168330814e2d00fb10d1ed50'],False,"test_api.py, debian.json, github.json, openssl.json"
+55aa42c5b32043e7e91c02663c68b6c5520ca5c7,"Fix typo in CHANGELOG
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['b853493e82f581939094215cb7afed41f75fdf66'],False,CHANGELOG.rst
+214334d57f19f46b4a2cef117f3178dacb267532,"Fix indentation #963
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['b96b1bf20b119081419074c0dffdddb776bc1f21'],False,introduction.rst
+85243ce50dc37b1b0b2398daf498c2d602d1cb76,"Fix severity table column spillover #982
+
+Reference: https://github.com/nexB/vulnerablecode/issues/982
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['caf33540a72cb86b440b9a7b6307887dc9d461b7'],False,vulnerability_details.html
+047524611869821634feb1bc2332c084be023be8,"Merge pull request #983 from nexB/982-severity-table-bug
+
+Fix severity table column spillover","['caf33540a72cb86b440b9a7b6307887dc9d461b7', '1d419e1982647b9aa8e0e64bca7e3b41feb0d2ab']",True,
+f779900bef0ce3a6e3203464f59e45013ca570e6,"Rebase Migrations
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+Change the max length of scoring_elements
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+Fix typo in swap function and fix migration test
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+Add a migration test
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+Rename migration variable model
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+Fix test
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+Remove duplicate rows for CVSS
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['047524611869821634feb1bc2332c084be023be8'],False,"setup.cfg, 0029_vulnerabilityseverity_scoring_elements.py, 0030_vulnerabilityserverity_compute_score.py, 0031_vulnerabilityseverity_rm_extra_records_swap.py, models.py, severity_systems.py, test_data_migrations.py"
+1bb9f3eb68ea4b6a44cde1ec30c9200a20a890f9,"Fix formatting tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['0b2c24354caebf92104dce67a2ca1eea18b5a7ca'],False,"forms.py, views.py"
+b4d2340140402efc5351df0b680daebb72a4c1b5,"Fix formatting errors
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['9edd7a03c5616fcfe486ab6bc47b6aa9cf9fc9b5'],False,forms.py
+352aed620704a515162c95719c5fdd9a9dc4b2e3,"Rebase with latest changes and fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['b4d2340140402efc5351df0b680daebb72a4c1b5'],False,"models.py, test_auth.py, test_throttling.py"
+d4d2672717095848382c7bbfed9e19d6b99eb0fc,"Merge pull request #997 from nexB/nvd-improvements
+
+Improve NVD handling and more
+
+This PR
+
+-    improves how we handle NVD data
+-    refactors the purl2cpe script
+-    aligns some key internal names with UI and API (affected and fixed)
+-    uses querysets as model managers and streamline views
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>","['c9f70a0b1b0997d66042498e62ebbf28b8458199', '464adb36503ef31750367871f669422c095bdd37']",True,
+2c29973cc5bb09db3211e5172875217feeb07d6b,"Improve API request email
+
+* Enhance the email message content.
+* Streamline About content in web UI.
+* Format code and fix typos.
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['574fcd46165d0c16351b4397d29e07954ae4eecf'],False,"navbar.html, views.py"
+0a0460b1ff589a4784e4b523d727b11dddce444b,"Merge pull request #998 from nexB/fix-csrf
+
+Fix csrf","['d4d2672717095848382c7bbfed9e19d6b99eb0fc', '2c29973cc5bb09db3211e5172875217feeb07d6b']",True,
+db8cd9a65e850eae016904ccd50e7a4e6a0427b3,"Fix upstream, live tests
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['176ef2668bb573b8863e2fa239df329bc5bb0055'],False,test_upstream.py
+13cbf844a7847027ea73f4579fed07a77173b67a,"Use scoring elements everywhere
+
+Also fix tests to use a regen env variable consistently
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['c3f8d5d8a6a2953f5cd438af7d13db4844501e67'],False,"redhat.py, archlinux-multi-expected.json, parse-advisory-archlinux-expected.json, nvd-expected.json, parse_advisory_data-expected.json, composer-expected.json, gem-expected.json, golang-expected.json, inference-expected.json, maven-expected.json, nuget-expected.json, pypi-expected.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, pysec-advisories_with_summary-expected.json, pysec-advisories_without_summary-expected.json, redhat-expected.json, ubuntu-oval-expected.json, test_github.py, test_pysec.py, test_redhat_importer.py"
+9a559bf273a5060b03d04856e5302d91d1c86a22,"Use simpler and smaller test fixtures
+
+* Do not use files for short lists
+* Use smaller and discrete test files
+* Prefer indivisual tests using plain HTML rather than packing data in
+  JSON
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['5033af7f3525d3f9f34e279739a612c241de1921'],False,"util_tests.py, extract_html_json-expected.json, 0.html, 0.html-expected.json, 1.html, 1.html-expected.json, 2.html, 2.html-expected.json, 3.html, 3.html-expected.json, package_advisory_url-expected.json, parsed_advisory-expected.json, purls.txt, test_snyk.py"
+79f6f71821ee0dd1a1a60671976b85579df8e27f,"Adjust the code according to changes in postgres html page
+
+Fixed get_or_create_from_purl
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['03d93095fe1b5e25530b72d176e128c4e3d0606d'],False,"postgresql.py, models.py, advisories.html"
+bf048be62725b80fa15970dc4ee909ea7c7e9279,"Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['0aface03ee4589e40148de4e93a415c70666bfe8'],False,"models.py, test_postgresql.py"
+057a36836534a81f6f7a4becbf4e537b3011a504,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['bf048be62725b80fa15970dc4ee909ea7c7e9279'],False,parse-advisory-postgresql-expected.json
+e64706fb6b9dc978dfb4a249396f04cee87a85c9,"Fix API key request form UI
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['469d20e7c5fd6382878c1b81886ef767d4a4a38a'],False,"forms.py, api_user_creation_form.html"
+83b2bc6dab5fe15eb8a172956dbdfb385e6a19e0,"Merge pull request #1004 from TG1999/ui
+
+Fix the API key request form UI and make it consistent with rest of UI","['469d20e7c5fd6382878c1b81886ef767d4a4a38a', '60954945865a5d6edb86706274e51bd8ff045edf']",True,
+5dabfc974659db92620267e6d04efb0691b7f00d,"Merge pull request #1033 from TG1999/fix/1032
+
+Handle purl fragments in package search #1032","['465a171e85becfdcdb178d751584767fe8c22087', '5791236186e394559dc005ccbf141da4c2aa39fa']",True,
+92d1bf0e8a21fed9f95c15e700ea5054f3af9484,"Merge pull request #1027 from TG1999/fix/1025
+
+Ingest npm data through github api #1025","['5dabfc974659db92620267e6d04efb0691b7f00d', '52e486e1068718456456d91acf97567f643bb4fb']",True,
+b77529c425622e103c48e893bf5593d8cbcdcacc,"Modify get_exact_purls to support multiple fixed versions in an affected_package
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['1d1df82e0c9366bba390e542f1a0c7218c59f017'],False,default.py
+1e79bc632c7053d036272cfe3c3174df2a205325,"Update fixed-version code and add test for 'never released' values  #971
+
+Reference: https://github.com/nexB/vulnerablecode/issues/971
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['3af61929461c6adc5de52472934b0aec234b202c'],False,"apache_httpd.py, test_apache_httpd.py, CVE-2017-9798.json, to-advisory-CVE-2017-9798-apache-httpd-expected.json"
+17a2d082ec13afe027f58bc8d6def6c4fa2a3d62,"Merge pull request #1065 from TG1999/fix_serach_regression
+
+Support incomplete versions for a valid purl in search","['f3058d1fb90df80c4165a98922dbb70ed024a501', '386b587a4016607c219ab8a11892dab47bfcbe8f']",True,
+f8ad4ee6eb2ac151793532cf4eec17319f2d7a8a,"Commit non-working will-not-fix code #970
+
+Reference: https://github.com/nexB/vulnerablecode/issues/970
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['03ff5eeeaf2b5ca203a42ad5f33ba6af35ef0ea7'],False,apache_tomcat.py
+a9a6ea28978d03d3fa9bd4ae15aa60bb9345110a,"Fix importer tests
+
+Remove the weaknesses table header
+
+Fix expected_files tests
+
+Fix all test cases
+
+Add CWE support for NVD importer
+
+Fix migration conflict
+
+Add Weakness model
+
+Fix requirements.txt , Fix migration conflict
+
+Add cwe name instead of Hyperlinks
+
+Add nexB/cwe package
+
+Fix test , remove empty lines
+
+Add CWE in the new UI
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['a78d1c02933899fd8a372e4cf95b193180b9ed9e'],False,"requirements.txt, setup.cfg, import_runner.py, importer.py, nvd.py, improve_runner.py, improver.py, 0037_advisory_weaknesses_weakness.py, models.py, vulnerability_details.html, CVE-1999-1199-apache-httpd-expected.json, CVE-2017-9798-apache-httpd-expected.json, CVE-2021-44224-apache-httpd-expected.json, CVE-2022-28614-apache-httpd-expected.json, archlinux-multi-expected.json, parse-advisory-archlinux-expected.json, debian-expected.json, debian-improver-expected.json, debian-oval-expected.json, alpine-expected.json, alpine-input.json, nvd-expected.json, nvd-input.json, parse_advisory_data-expected.json, gentoo-expected.json, composer-expected.json, gem-expected.json, golang-expected.json, inference-expected.json, maven-expected.json, npm-expected.json, nuget-expected.json, pypi-expected.json, composer-expected.json, composer-improver-expected.json, gem-expected.json, gem-improver-expected.json, golang-expected.json, golang-improver-expected.json, maven-expected.json, maven-improver-expected.json, npm-expected.json, npm-improver-expected.json, nuget-expected.json, nuget-improver-expected.json, pypi-expected.json, pypi-improver-expected.json, istio-expected.json, expected-md.json, expected-yml.json, improver-advisories.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, nvd-expected.json, improver-advisories.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, parse-advisory-npm-expected.json, parse-advisory-postgresql-expected.json, pypa-expected.json, pysec-advisories_with_summary-expected.json, pysec-advisories_without_summary-expected.json, redhat-expected.json, expected_file.json, ubuntu-oval-expected.json, test_nginx.py, test_openssl.py, views.py"
+0969c9cf8abd41bafef4c4a6aa5a6dfddf5a5883,"Fix merge Conflict
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['a9a6ea28978d03d3fa9bd4ae15aa60bb9345110a'],False,"parse-apache_tomcat-selected-advisories-expected.json, elixir-expected.json, kbmsr2019-expected.json, suse-cvss-scores-expected.json, utils.py"
+0d55b24314d0661fb569fee97f606c878824349d,"Merge pull request #1087 from TG1999/fix/1086
+
+Add migrations to remove corrupted advisories #1086","['59fd9724b6262155bda5286e05e5848c09479f97', '6955e98d5875baf8ff2368b45e3f92e2589b4883']",True,
+ba1543940f7518268a270aabd5a485abfc5e0947,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['e3671a655244d8da2427c99d7589c7a159a97b2b'],False,test_view.py
+b9492dc4896b5282342a3a0e017163fe644ae379,Merge branch 'main' into fix_package_detail_view,"['ba1543940f7518268a270aabd5a485abfc5e0947', '8b59296b164b1c6776ea986d33895083e592ba37']",True,
+87fb34acfb638d7d46f1256935dfb761c6f5f444,"Merge pull request #1101 from TG1999/fix_package_detail_view
+
+Use for_purl instead of for_package_url in package detail view","['8b59296b164b1c6776ea986d33895083e592ba37', 'b9492dc4896b5282342a3a0e017163fe644ae379']",True,
+fe1e94c3542cfedb4803d12641eefaba6ee84467,"Add pathlib and glob
+
+Fix docstring style
+
+Add the License, add a Git Importer to fireeye
+
+Remove print logs
+
+Add docstring , add test for parse_advisory_data.
+
+Add Fireeye importer
+
+Reference: #487
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['07985b0e67ce5b3cdc497efe6a813da6a21777b2'],False,"__init__.py, fireeye.py, fireeye_test1.md, fireeye_test1_expect.json, fireeye_test2.md, fireeye_test2_expect.json, test_fireeye.py"
+839bb3cae0cd11c83689f81783c9a427775e41fe,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['6d2c127262b297435505f36ea42fb6b8261979fc'],False,"fireeye_test1_expect.json, fireeye_test2_expect.json"
+6e31d1d58f3d891cf085b155b058d769d2e46b5a,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['7734db6e5f8a84f003deed18abea0c32dfd6d6d1'],False,test_api.py
+bd69a8f9da35c30adeb850e0847da5caec818a05,"Fix NotImplementedError #972
+
+Reference: https://github.com/nexB/vulnerablecode/issues/972
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['a9f48423c603fa396d8b14c7d1baa776e8e85d13'],False,"apache_kafka.py, to-advisory-apache_kafka-expected.json"
+33bf05a66376a96f6158f6125ec512d31d9e6865,"Fix additional import errors #972
+
+Reference: https://github.com/nexB/vulnerablecode/issues/972
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['bd69a8f9da35c30adeb850e0847da5caec818a05'],False,apache_kafka.py
+6b2cd15e56b1954b1d51683161a74ee7d0bc905d,"Fix failing test #972
+
+Reference: https://github.com/nexB/vulnerablecode/issues/972
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['daca89d570ba42674162ce69af3bad8863e169f5'],False,to-advisory-apache_kafka-expected.json
+d0aba2097c800fe137661fbe174b1b4a32c4907b,"Merge pull request #1118 from keshav-space/vulntotal
+
+minor fix: load env for GitHub DataSource","['728fba7a8ca563a95b41ecee861fcb75f31e18f8', '20898762410219833cc7e8bd4a55a18e77e4f5e5']",True,
+dec0ad5be2b3d8e5482fc829df204ea9df0415e5,"Fix github importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['d0aba2097c800fe137661fbe174b1b4a32c4907b'],False,github.py
+f2e3b210875a2bb15ee853d68f13cdb198b8c577,"Merge pull request #1149 from TG1999/fix_1142
+
+Fix github importer","['d0aba2097c800fe137661fbe174b1b4a32c4907b', 'dec0ad5be2b3d8e5482fc829df204ea9df0415e5']",True,
+9c539212448acb2236c0976a15f53f676c161fc6,"Fix kbmsr2019 importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['3aff154efb8e4d9fc858afaa0e64bc00fb23c8f8'],False,"project_kb_msr2019.py, test_msr2019.py"
+e4849fff3494aa4897127440242512aa1c158a83,"Merge pull request #1158 from TG1999/fix_project_kbmsr2019
+
+Fix kbmsr2019 importer","['3aff154efb8e4d9fc858afaa0e64bc00fb23c8f8', '9c539212448acb2236c0976a15f53f676c161fc6']",True,
+1f183b5df3fded982133b70a6c8d418a0b12e20b,"fix github ecosystem mapping
+
+- GitHub refers `cargo` as `RUST` and `hex` as `ERLANG`
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['33b3d92676a09b416175cb876606ce7470b67aa1'],False,"github.py, test_github.py"
+7b1fdd1aebb5578c7348090fd73c75d122dd6acb,"fix OSV ecosystem mapping
+
+- OSV refers `cargo => crates.io`, `gem => RubyGems` and `deb => Debian`
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['1f183b5df3fded982133b70a6c8d418a0b12e20b'],False,"osv.py, test_osv.py"
+e89b6feaca076ee12d8fbbad8e2f64c6c63e2e35,"fix SNYK ecosystem mapping
+
+- snyk refers `gem` as `rubygems`
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['7b1fdd1aebb5578c7348090fd73c75d122dd6acb'],False,"snyk.py, test_snyk.py"
+044414a57643942f619ec51e66c6aa45419ffe48,"filter fixed and affected package based on input purl.type
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['e89b6feaca076ee12d8fbbad8e2f64c6c63e2e35'],False,"vulnerablecode.py, test_vulnerablecode.py"
+1c9a82c276dec18691649416658b6d307c9f2cde,"Merge pull request #1139 from keshav-space/improve_vt
+
+fix ecosystem mappings and filter out fixed and affected package based on purl.type in VCIO","['33b3d92676a09b416175cb876606ce7470b67aa1', '044414a57643942f619ec51e66c6aa45419ffe48']",True,
+35ffb91b1244a061abc28329a3e43fbe9627a407,"Regen test fixture for VCIO
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['83cb6c46a6ce2e121f3284da4d0d91dae9d55913'],False,"github.py, parse_advisory-expected.json"
+451aa7062c9093243b8862e3f728ee49b5d3f902,"Fix Apache Kafka and Apache HTTPD importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['c71edf1a5bbe1b5e3ac374d1a62b271574e62279'],False,"apache_httpd.py, apache_kafka.py"
+ed7e2ae93f4f3815d860c533a1b887e188c389b6,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['37a9a7647e6e8f47bf36c1c5180311baa78cdf28'],False,"CHANGELOG.rst, apache_httpd.py, apache_kafka.py, test_apache_kafka.py"
+3abdc3fce54b965c1daaa58d4a41eec797f99ee2,"Merge pull request #1176 from TG1999/fix_apache_kafka_apache_httpd
+
+Fix Apache kafka and Apache httpd importer","['c71edf1a5bbe1b5e3ac374d1a62b271574e62279', '8d614e99da953a4134e65d47725a90d1e25d89cb']",True,
+1c38ef3d45bfa8b44dd4c778e44b0a08c201f5bf,"Fix affected package merge functionality
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['b26cd93a41a0e4ecf932f6334b257173ffb6de1a'],False,"importer.py, test_affected_package.py"
+c5c88d752273f50e064cb78b7c2c7bd7f4ee53de,"Merge pull request #1224 from TG1999/fix_merge_function
+
+Fix affected package merge functionality","['b26cd93a41a0e4ecf932f6334b257173ffb6de1a', '6fd7267b09dc8e88f11e22a3edb45ecce8079c72']",True,
+0290bf0adcc06c4eaa33f5463c1a6f0e3114b314,"Merge pull request #1256 from TG1999/fix_cwe_view_problem
+
+Remove weaknesses from view which are not in DB","['4faae5440b3e0e2ab15cbe863fcdf7aee23e6908', 'ef7bbb4f151f86230c4ae281ea9039d5c9f92d37']",True,
+b6e38d5604b543a98e41f524003a0d0dc9395cc3,"Fix Vulnerability details text overflow #1279
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1279
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['2cb0e29a0c22a2fbbe181e2a429df14c2e769b9e'],False,"vulnerability_details.html, custom.css"
+6cc8fd7fe93e54b1a07b786ae1b895c3d7b34628,"Merge pull request #1282 from nexB/1279-fix-vulnerability-text-overflow
+
+Fix Vulnerability details text overflow","['2cb0e29a0c22a2fbbe181e2a429df14c2e769b9e', 'b6e38d5604b543a98e41f524003a0d0dc9395cc3']",True,
+ee60902b99b4d6833e8b291dbc2f773ae61995f2,"Fix issue #1302 (#1303)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['4e46cc3722d2df893be900aa4749d478229d5773'],False,"CHANGELOG.rst, test_utils.py, utils.py"
+7ece023163200f4a41ee0da1b15fe1e22334b4d3,"Write packages and vulnerabilities at the time of import (#1280)
+
+* Write packages and vulnerabilities at the time of import
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Optimise queries
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* remove unused imports
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add CHANGELOG
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Move clean summary function to AdvisoryData class
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['582a1fb6262e805cab903ac9618684c9b5873918'],False,"CHANGELOG.rst, import_runner.py, importer.py, __init__.py, improve_runner.py, __init__.py, default.py, importer_specific_improver.py, improve.py, 0040_remove_advisory_date_improved_advisory_date_imported.py, models.py, elixir-expected.json, elixir-improver-expected.json, gentoo-expected.json, npm-expected.json, expected-yml.json, test_example.py, test_import_runner.py, test_importer_specific_improver.py"
+1a78756fa3262c06a8d439fcbc67de8a52f65c24,"Add pagination to valid versions improver (#1307)
+
+* Add pagination to valid versions improver
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix formatting
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['1ff2e9045cec0d84f7d541941c95a0fd416fa153'],False,"CHANGELOG.rst, improve_runner.py, valid_versions.py"
+db5cf7fddd59b7aed7927bf33800996a8366072a,"Add proper acknowledgements for NGI projects. Fixes #1325
+
+Signed-off-by: Armijn Hemel <armijn@tjaldur.nl>",['37180dfbe175a2c6c597dbb33a5304fef21b4642'],False,README.rst
+c93c5e5bf43db568e8b6d1aa734d09c26e1a9dd3,"fix formatting
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['b13a710fb26ab864eab6fbf5b22018a11f81cffd'],False,test_throttling.py
+c42945c7a0d9123891c21091bc5f92b9f8d38294,"Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['7cad40f09180d8e1c52ea9fe65253f8ba3b25fd5'],False,test_throttling.py
+de4372d2aa5f3dd98a553b986eadf3178cafe7bf,"fix .rst error
+
+Signed-off-by: Armijn Hemel <armijn@tjaldur.nl>",['db5cf7fddd59b7aed7927bf33800996a8366072a'],False,README.rst
+69e0ab7e992b9e63345e0593339b94b925cad0ba,"Merge pull request #1330 from armijnhemel/ngi-acknowledgements
+
+Add proper acknowledgements for NGI projects. Fixes #1325","['c42945c7a0d9123891c21091bc5f92b9f8d38294', '98df5058f168ce96049aaa3c954d384d9e6f1e74']",True,
+8f8190e20edc73340de50201f02945a07aff0ffa,"Import data from OSS-Fuzz (#897)
+
+Add OSSFuzzImprover to IMPROVERS_REGISTRY
+Fix oss-fuzz test ( add weakness in expected test file )
+Add oss-fuzz tests
+Import data from oss_fuzz using osv format
+
+Resolve merge conflicts
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['d8cdaf472b753e40925ca4679c118b0fd1e8aa63'],False,"__init__.py, oss_fuzz.py, __init__.py, valid_versions.py, oss-fuzz-data1.yaml, oss-fuzz-data1.yaml-expected.json, oss-fuzz-data2.yaml, oss-fuzz-data2.yaml-expected.json, test_oss_fuzz.py"
+dc94005e96bfa44de4c12284d7f09900fbb1bbc9,"Mark advisories status according to NVD advisory (#1232)
+
+* Mark advisories as rejected according to NVD advisory
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add improver for marking vulnerabilities as rejected as per NVD
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix vulnerability status improver
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Change status rejected to invalid
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['f1675622218d08810267c79f8df30f4553af1cc6'],False,"__init__.py, vulnerability_status.py, 0042_advisory_status_vulnerability_status.py, models.py, vulnerability_details.html, parse-apache_tomcat-selected-advisories-expected.json, nvd-expected.json, nvd-rejected-expected.json, rejected_nvd.json, parse-advisory-npm-expected.json, CVE-2023-35866.json, test_nvd.py, test_vulnerability_status_improver.py, views.py"
+c94e7e9d8b39093c0918c993af54fec11eb6b76c,"Fix search encoding issue (#1343)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1336",['f1fad9f0cb2ee191ddc847d99a29bba36553d11c'],False,pagination.html
+b156af0f1c84ca6cb41dc46da6638c37d1d0cc18,"Add initial fixed-affected-matching work #1228 (#1249)
+
+* Add initial fixed-affected-matching work #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add Prefetch and univers-based version comparison #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update affected-fixed package matching #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Improve matching and reporting code and UI #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add univers version, revise sort and related code, update and add new tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Move weakness test #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Modify UI, update dictionary and tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Begin replacing strings with objects in package details dictionary #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Clean current package details template and related model code #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Begin work on major-version issue #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Complete first round of major-version vetting #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Remove major-version code, clean comments etc. #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Begin test refactoring #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Finish package details code and template, refactor/create package-related tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor package details-related code #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update Package details UI and Package API #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Fix 1 of 4 failing API tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add initial fixed-affected-matching work #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Explore context and Package class approaches for affected-fixed package matching #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Note that my updated code is still in testing/dev stage and has not yet been completed or cleaned.
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add Prefetch and univers-based version comparison #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update affected-fixed package matching #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Improve matching and reporting code and UI #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add univers version, revise sort and related code, update and add new tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Begin work on major-version issue #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Complete first round of major-version vetting #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Remove major-version code, clean comments etc. #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Begin test refactoring #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Finish package details code and template, refactor/create package-related tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Commit the initial refactoring changes from last week #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor package details-related code #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update Package details UI and Package API #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Save test experiments including commented-out variations #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Fix 1 of 4 failing API tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update API including ""lesser"" fixed by versions, fix and update failing tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update APITestCasePackage() class #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Test lack of ""vulnerability"" property #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update get_affected_vulnerabilities() and test #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update MinimalPackageSerializer() and missing-vulnerability-key test #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Append inside the if condition #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update get_vulnerability() method #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Enable test_models.py and fix failing tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update per PR comments #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Convert Package method to PackageQuerySet method, clean code and tests #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add property on functions in models
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add and fix tests, address other comments #1228
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1228
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+---------
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+Signed-off-by: John M. Horan johnmhoran@gmail.com
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Co-authored-by: Tushar Goel <tushar.goel.dav@gmail.com>",['d3f314dce082e1b70350019137687a1d214b19f2'],False,"api.py, models.py, package_details.html, packages.html, vulnerabilities.html, vulnerability_details.html, conftest.py, test_api.py, test_models.py, views.py, custom.css"
+57ee15fd98e10de4ef04c1e72a93bf17a28dcd62,Fix table borders in Vulnerability details UI #1356 (#1358),['cf7745d9c3377058311ef8c42fcde9abc901330d'],False,"vulnerability_details.html, custom.css"
+514624bad2a1faac85277bce7753d964bbf1c8cd,"Fix import runner's process_inferences (#1360)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['57ee15fd98e10de4ef04c1e72a93bf17a28dcd62'],False,"import_runner.py, test_import_runner.py"
+b27c4854eea95e3343d70b937d967e326e94a02b,"Fix debian OVAL importer (#1361)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['514624bad2a1faac85277bce7753d964bbf1c8cd'],False,"importer.py, debian_oval.py"
+e9c280d3940f503d1ba9b23be82d30c63dbf675e,"Fix swagger API docs generation (#1366)
+
+* Fix swagger API doc for `api/packages/bulk_search/`
+
+- Use `extend_schema` to override the request body, which was not being properly discovered.
+
+- drf-spectacular relies on `get_serializer_class()` and `get_serializer()`, and it works well for view functions that purely deal with ModelSerializer. For anything else, it gets a bit murky, and it is advised to provide proper overrides in the `extend_schema` decorator.
+
+- Override erroneous pagination and filter backend caused due to response containing multiple serializer object https://drf-spectacular.readthedocs.io/en/latest/faq.html#my-action-is-erroneously-paginated-or-has-filter-parameters-that-i-do-not-want
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Add tests for `bulk_search`
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Test `bulk_search` with empty request body
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Fix API doc generation for `api/packages/lookup`
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Fix API doc generation for `api/packages/bulk_lookup`
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+---------
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['939055a6bd85940c728a51ad05cfb67a0dd086e9'],False,"api.py, test_api.py"
+e2b60c9b5a36bb5e2d407178f056aa11452279a0,"Add dates and changelog for packages and vulnerabilities (#1310)
+
+* Add chaneglog
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add importer name to advisory importers
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix views
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* clean-up models.py
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add importer name and importing authority for istio
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix models
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Make code more readable
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Cleanup models
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for changelogs
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Adjust package changelog according to new requirements
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove importing_authority
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add vulnerability changelog
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Make changes according to recent PR merging
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Format package_details.html
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for checking unicity of importer names
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tooltip for package and vulnerability views
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Typo fixes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix typos
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix pypa importer changelog url
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Refactor ubuntu usn
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['d21d2c1de127118a7ff884c184eb6aefdadf157c'],False,"import_runner.py, importer.py, alpine_linux.py, apache_httpd.py, apache_kafka.py, apache_tomcat.py, archlinux.py, debian.py, debian_oval.py, elixir_security.py, fireeye.py, gentoo.py, github.py, gitlab.py, istio.py, mozilla.py, nginx.py, npm.py, nvd.py, openssl.py, oss_fuzz.py, osv.py, postgresql.py, project_kb_msr2019.py, pypa.py, pysec.py, redhat.py, retiredotnet.py, suse_scores.py, ubuntu.py, ubuntu_usn.py, xen.py, improve_runner.py, __init__.py, vulnerability_status.py, 0043_alter_advisory_unique_together_advisory_url_and_more.py, 0044_alter_packagechangelog_options_and_more.py, models.py, package_details.html, vulnerability_details.html, example_importer_improver.py, test_alpine.py, test_apache_tomcat.py, test_changelog.py, CVE-1999-1199-apache-httpd-expected.json, CVE-2017-9798-apache-httpd-expected.json, CVE-2021-44224-apache-httpd-expected.json, CVE-2022-28614-apache-httpd-expected.json, to-advisory-apache_kafka-expected.json, parse-apache_tomcat-selected-advisories-expected.json, archlinux-multi-expected.json, parse-advisory-archlinux-expected.json, debian-expected.json, debian-oval-expected.json, elixir-expected.json, parse_advisory_data-expected.json, fireeye_test1_expect.json, fireeye_test2_expect.json, gentoo-expected.json, composer-expected.json, gem-expected.json, golang-expected.json, maven-expected.json, npm-expected.json, nuget-expected.json, pypi-expected.json, composer-expected.json, composer-improver-expected.json, gem-expected.json, maven-expected.json, maven-improver-expected.json, npm-expected.json, npm-improver-expected.json, nuget-expected.json, nuget-improver-expected.json, pypi-expected.json, pypi-improver-expected.json, istio-expected.json, kbmsr2019-expected.json, expected-md.json, expected-yml.json, security_advisories-advisory_data-expected.json, nvd-expected.json, nvd-rejected-expected.json, security_advisories-advisory_data-expected.json, oss-fuzz-data1.yaml-expected.json, oss-fuzz-data2.yaml-expected.json, parse-advisory-npm-expected.json, parse-advisory-xen-expected.json, parse-advisory-postgresql-expected.json, pypa-expected.json, pysec-advisories_with_cwe-expected.json, pysec-advisories_with_summary-expected.json, pysec-advisories_without_summary-expected.json, redhat-expected.json, expected_file.json, suse-cvss-scores-expected.json, ubuntu-oval-expected.json, ubuntu-usn-expected.json, test_data_source.py, test_elixir_security.py, test_example.py, test_fireeye.py, test_gitlab.py, test_import_command.py, test_import_runner.py, test_importer.py, test_improve_runner.py, test_istio.py, test_mozilla.py, test_openssl.py, test_oss_fuzz.py, test_pypa.py, test_pysec.py, test_retiredotnet.py, test_vulnerability_status_improver.py, utils.py, views.py"
+5932722d14570a0459ac7e84674455bcc8fe8ba8,"Package purl model updates (#1368)
+
+* Add missing migration for vulnerability.status
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Migrate qualifiers to plain charfield step 1
+
+Create qualifiers_temp temp field
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Migrate qualifiers to plain charfield step 2
+
+Copy qualifiers to qualifiers_temp
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Add qualifiers_temp in unique_together step 3
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove qualifiers from qunique_together step 4
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Copy qualifiers_temp to qualifiers step 5
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add qualifiers in unique_together step 6
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Delete qualifiers_temp and remove it from unique_togther step 7
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Formatting changes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Correct the 0045 migration
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Migrate qualifiers to plain charfield step 1
+
+Create qualifiers_temp temp field
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Migrate qualifiers to plain charfield step 2
+
+Copy qualifiers to qualifiers_temp
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Add qualifiers_temp in unique_together step 3
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Remove qualifiers from unique_together step 4
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Copy qualifiers_temp to qualifiers step 5
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Add qualifiers in unique_together step 6
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Delete qualifiers_temp field and unique_togther step 7
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1327
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Format models.py
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove dupe Packages from qualifiers
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Remove dupe Packages from ns/name
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Correct migrations and add tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Update tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove tests for warts
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add changelog
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Update PR according to recent changes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Update tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Co-authored-by: Philippe Ombredanne <pombredanne@nexb.com>",['e2b60c9b5a36bb5e2d407178f056aa11452279a0'],False,"CHANGELOG.rst, api.py, importer.py, improver.py, default.py, valid_versions.py, 0022_alter_vulnerability_vulnerability_id.py, 0045_remove_duplicated_purls_with_same_qualifiers.py, 0046_package_qualifiers_temp.py, 0047_copy_qualifiers_to_qualifiers_temp.py, 0048_alter_package_unique_together.py, 0049_alter_package_unique_together_and_more.py, 0050_copy_qualifiers_temp_back_to_qualifiers.py, 0051_alter_package_unique_together_and_more.py, 0052_remove_duped_purls_with_namespace_name_mixed.py, models.py, test_api.py, CVE-1999-1199-apache-httpd-expected.json, CVE-2017-9798-apache-httpd-expected.json, CVE-2021-44224-apache-httpd-expected.json, CVE-2022-28614-apache-httpd-expected.json, apache-httpd-improver-expected.json, apache-kafka-improver-expected.json, to-advisory-apache_kafka-expected.json, apache-tomcat-improver-expected.json, parse-apache_tomcat-selected-advisories-expected.json, archlinux-multi-expected.json, parse-advisory-archlinux-expected.json, debian-expected.json, debian-improver-expected.json, debian-oval-expected.json, debian-oval-improver-expected.json, alpine-expected.json, elixir-expected.json, elixir-improver-expected.json, parse_advisory_data-expected.json, gentoo-expected.json, composer-expected.json, gem-expected.json, golang-expected.json, inference-expected.json, maven-expected.json, npm-expected.json, nuget-expected.json, pypi-expected.json, composer-expected.json, composer-improver-expected.json, gem-expected.json, gem-improver-expected.json, maven-expected.json, maven-improver-expected.json, npm-expected.json, npm-improver-expected.json, nuget-expected.json, nuget-improver-expected.json, pypi-expected.json, pypi-improver-expected.json, istio-expected.json, istio-improver-expected.json, expected-md.json, expected-yml.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, npm-improver-expected.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, parse-advisory-npm-expected.json, parse-advisory-postgresql-expected.json, pypa-expected.json, pysec-advisories_with_cwe-expected.json, pysec-advisories_with_summary-expected.json, pysec-advisories_without_summary-expected.json, redhat-expected.json, expected_file.json, ubuntu-oval-expected.json, ubuntu-oval-improver-expected.json, test_data_migrations.py, test_improver.py, test_view.py, utils.py, views.py"
+02e3faedcc729ba90a59f8f862ec85a75a5a6f21,"Create SUSE OVAL importer (#1085)
+
+* Create suse_oval.py and related test files #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Explore OvalParser() parsing process #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Commit latest parsing changes #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update tests #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add note re loop through list of aliases #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Work on alias/CVE loop #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add OVAL parsing test #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor OVAL-relared code, fix failing tests #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Delete unneeded large XML files #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Filter for name-affected.xml files, check CVE prefixes #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor OvalParser(), add and update tests #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor tests and test files, freeze Black version #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Create suse_oval.py and related test files #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Explore OvalParser() parsing process #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Commit latest parsing changes #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update tests #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add note re loop through list of aliases #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Work on alias/CVE loop #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add OVAL parsing test #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor OVAL-relared code, fix failing tests #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Delete unneeded large XML files #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Filter for name-affected.xml files, check CVE prefixes #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor OvalParser(), add and update tests #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Refactor tests and test files, freeze Black version #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update setup.cfg
+
+* Replace 'list()' with 'sorted()' #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Modify OvalElement class __lt__ method and create test #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Add 'url' field to expected JSON test output #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+* Update __lt__ method and related test #1079
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1079
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+
+---------
+
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>
+Signed-off-by: John M. Horan johnmhoran@gmail.com
+Co-authored-by: Tushar Goel <34160672+TG1999@users.noreply.github.com>",['5932722d14570a0459ac7e84674455bcc8fe8ba8'],False,"importer.py, suse_oval.py, lib_oval.py, oval_parser.py, mock-definitions-only.xml, org.opensuse.CVE-2008-5679-modified-versions.xml, org.opensuse.CVE-2008-5679.xml, suse-oval-CVE-2008-5679-expected.json, test_data_source.py, test_suse_oval.py"
+be2379185fa82d14a6f13875e0da65bd02b30cc3,"Fix package details view template (#1384)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['16008116db69b6979a0bb0eac9ef8b3681643eea'],False,"package_details.html, views.py"
+b827ade1f5b7d0190449968e06896d7f10b5dc4d,"Add robots.txt (#1382)
+
+* Add robots.txt in views
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add changelog and bump version
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add migration for version update
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Update robots.txt according to latest changes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['be2379185fa82d14a6f13875e0da65bd02b30cc3'],False,"CHANGELOG.rst, 0053_alter_packagechangelog_software_version_and_more.py, robots.txt, test_view.py, __init__.py, urls.py"
+87a4330e9701c98c4fac9904474f9bcd411a5be7,"Fix isse 1385 (#1386)
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1385
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['b827ade1f5b7d0190449968e06896d7f10b5dc4d'],False,package_details.html
+2308450e636af903e9952131ce75e2bdc95887b4,"Fix 1387 (#1389)
+
+* Fix issue 1387
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1387
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['87a4330e9701c98c4fac9904474f9bcd411a5be7'],False,"models.py, test_models.py"
+69515136877164bc62d64c3928e14c2d659dbd8e,"Fix wrong versions error in GithubDataSource
+
+Signed-off-by: Shenoy <shravanshenoy1998@hotmail.com>",['5cefff7e0bb5e61a18841d081d11c30b8c3bdc96'],False,github.py
+1fc186c8697d925e3325dbebe8a42203abf43517,"Merge pull request #1399 from shravankshenoy/bug/vulntotal-github-cve-version-bug
+
+Fix incorrect versions in GithubDataSource CVE","['5cefff7e0bb5e61a18841d081d11c30b8c3bdc96', '69515136877164bc62d64c3928e14c2d659dbd8e']",True,
+e844bb2608cace98ebf21f840749a21020aabb3e,"Improved code style and fixed typos (#1157)
+
+* style: modified snyk datasource file to follow pep 8
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* style: modified osv datasource file to follow pep 8
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* style: modified oss datasource file to follow pep 8
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* style: modified vulnerablecode datasource file to follow pep 8
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* style: modified gitlab datasource file to follow pep 8
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* style: modified gitlab datasource file to follow pep 8
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* style: modified deps.py file to follow pep 8
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* Fixed some typos
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* Format code with Black and isort
+
+To ensure consistent code formatting, I used Black and isort to format the changed files.
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* Fix more typos in vulntotal tool
+
+Fixed more typos and formated the files
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* Use a consistent format for the docstring and maintain an imperative tone
+
+Changed the doctrings to have a consistent format and used Black and isort to format the changed files.
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+
+* Handle TypeError and IndexError raised by get_item
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Revert incorrect refactoring
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+---------
+
+Signed-off-by: Michael Ehab <michaelehab16@gmail.com>
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+Co-authored-by: Keshav Priyadarshi <git@keshav.space>",['1fc186c8697d925e3325dbebe8a42203abf43517'],False,"deps.py, github.py, gitlab.py, oss_index.py, osv.py, snyk.py, vulnerablecode.py, vulntotal_cli.py, vulntotal_utils.py"
+2471c87f2005df4e55b964b6e467b300b87381dd,"Fix Encoding Type in Fireeye Importer (#1404)
+
+* Fix Encoding Type in Fireeye Importer
+
+Signed-off-by: Harsh Mishra <hmisraji07@gmail.com>
+
+* Add Test to Fireeye Importer
+
+This test checks for UTF-8-SIG encoding
+
+Signed-off-by: Harsh Mishra <hmisraji07@gmail.com>
+
+* Reformat test_fireeye.py
+
+Signed-off-by: Harsh Mishra <hmisraji07@gmail.com>
+
+---------
+
+Signed-off-by: Harsh Mishra <hmisraji07@gmail.com>
+Co-authored-by: Tushar Goel <34160672+TG1999@users.noreply.github.com>",['174bf028f60993b24272e883ff99b218256ebbb6'],False,"fireeye.py, fireeye_test3.md, test_fireeye.py"
+e5c598b7c7909a8cc24d13c4ffacb4efc9badbd3,"Remove duplicated changelogs (#1400)
+
+* Remove duplicated changelogs
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix migrations
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix migrations
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['2471c87f2005df4e55b964b6e467b300b87381dd'],False,"0055_remove_changelogs_with_same_data_different_software_version.py, 0056_alter_packagechangelog_unique_together_and_more.py, models.py, test_data_migrations.py"
+bca15bba52422f1917f63d7f2073a0b8f8ff8e7f,"Add RubyImporter to git_importer test_git_importer_clone (#799)
+
+Drop cvss_v2
+Add ruby importer_name and Rebase
+Resolve merge conflicts
+Add advisory_url to ruby importer
+Add a notice and the spdx_license_expression
+Resolve merge conflict
+Add a docstring to get_affected_packages
+Add a unite test for get_affected_packages function
+Remove unused variables
+Fix sorted affected_package_merge
+Add ruby importer and improver
+Fix style test
+Fix test
+Rewrite affected_packages
+Ruby initial config
+Reference: #796
+
+Clean imported data after import process
+
+
+Fix sorted affected_package_merge
+Refactor Ruby importer and improver
+Add ruby importer and improver
+Fix style test
+Fix test
+Rewrite affected_packages
+Ruby initial config
+Reference: #796
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['bbd8c7c59149be0f11131fec2fc9e449d1b8c354'],False,"__init__.py, ruby.py, __init__.py, valid_versions.py, conftest.py, CVE-2007-5770-expected.json, CVE-2007-5770.yml, CVE-2010-1330-expected.json, CVE-2010-1330.yml, CVE-2018-11627-expected.json, CVE-2018-11627.yml, CVE-2018-7212-expected.json, CVE-2018-7212.yml, parse-advisory-ruby-expected.json, ruby-improver-expected.json, OSVDB-125675.yml, OSVDB-125676.yml, OSVDB-125678.yml, test_data_source.py, test_ruby.py"
+61eeb7245a4d84af004102c02800d83cfa263ead,"Add a test for cvss_printer (#1312)
+
+Fix the cvss vector test
+Resolve merge conflicts
+Add exception for s.scoring_system when is not in SCORING_SYSTEMS
+Add a get serverity values test
+Resolve merge conflict
+Change the style of cvss_printer display
+Add a new filter to print cvss vectors
+Change the table heading to Vertical
+Add support for CVSS vectors display
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['bca15bba52422f1917f63d7f2073a0b8f8ff8e7f'],False,"severity_systems.py, vulnerability_details.html, __init__.py, show_cvss.py, test_get_serverity.py, views.py"
+dee6ea2dacf8950fa6e589558710f696806ac270,"Add support for all osv ecosystems (#926)
+
+Add a GithubOSVImporter to git_importer parametrize test
+Refactor OSV ecosystem mapping
+Fix the test
+Update univers version and pass nuget test
+Resolve merge conflict
+Add a test for golang
+Fix test by adding cwe to expected files
+Resolve merge conflict
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['61eeb7245a4d84af004102c02800d83cfa263ead'],False,"__init__.py, github_osv.py, oss_fuzz.py, osv.py, pypa.py, pysec.py, __init__.py, valid_versions.py, github_osv_expected_1.json, github_osv_expected_2.json, github_osv_expected_3.json, github_osv_expected_4.json, github_osv_expected_5.json, github_osv_expected_6.json, github_osv_expected_7.json, github_osv_test_1.json, github_osv_test_2.json, github_osv_test_3.json, github_osv_test_4.json, github_osv_test_5.json, github_osv_test_6.json, github_osv_test_7.json, pypa-expected.json, test_data_source.py, test_github_osv.py, test_osv.py, test_pypa.py, test_pysec.py"
+4e5ef60fd1997ae79c0fd4e78e09b2897e04725e,"Add resource URL to the vulnerability and package details view in the API serializers (#1423)
+
+* Add vulnerability_url in API
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add package_url in API
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['30d33575d72f143507b2f6137a8547386e761534'],False,"api.py, models.py, test_api.py"
+766cb3e0a4d2567cac0d9f239746625257464409,"Prepare for release v34.0.0rc3 (#1426)
+
+* Prepare for release v34.0.0rc3
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix Changelog
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['034145185b77d9fb991e706d36815cf9dc0e7c42'],False,"CHANGELOG.rst, 0057_alter_packagechangelog_software_version_and_more.py, __init__.py"
+5fb889f02776292a48f253b09c83e8e28f437046,"Revert 1400-fix_dupe_changelog (#1440)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['766cb3e0a4d2567cac0d9f239746625257464409'],False,"0055_alter_packagechangelog_software_version_and_more.py, 0055_remove_changelogs_with_same_data_different_software_version.py, 0056_alter_packagechangelog_unique_together_and_more.py, models.py, test_data_migrations.py"
+8ea43d35878ddddf6ab9c64f7c9923c64b118cd6,"Fix linting error
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['23d6702bab5f46f2c279d204142dec67dbaffc6e'],False,github.py
+22132efcaadb69c45ea706db6368a3a9a542fa11,"Fix persistent failing docs link checks
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['8ea43d35878ddddf6ab9c64f7c9923c64b118cd6'],False,conf.py
+045fedd738e611e3185d18652005e6587c72bad6,"Merge pull request #1445 from poju3185/fix-vulntotal-import
+
+Update GitHub GraphQL import in vulntotal datasources","['4a6734b1bbaa8df6fd816f3eb4fd843a88c1ecec', '22132efcaadb69c45ea706db6368a3a9a542fa11']",True,
+77780097e66eefe292d98578f9f0f68f43c664a1,"Removed fixed version resolver for safetydb
+
+Signed-off-by: Omkar Phansopkar <omkarphansopkar@gmail.com>",['9352e6287a639477e2a50f8387b3ebd34a85aba0'],False,"safetydb.py, parse_advisory-expected.json, parse_advisory_cve-expected.json, test_safetydb.py"
+fcd4c0c8deb857c8532cb36f54e5f38331a19689,"Fix: Change severity versions from generic textual to cvssv3.1 in curl importer.
+Signed-off-by: ambuj <kulshreshthaak.12@gmail.com>",['24b5eaac744f5183b2752df9373c1b672eab68c6'],False,"curl.py, expected_curl_advisory_output1.json, expected_curl_advisory_output2.json, expected_curl_advisory_output3.json"
+d9eb90eb3ed47de149ae3766e12a7226257b8ba4,"Rename ""Fixed by vulnerabilities"" column #1501
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1501
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['6727786739ed0e78667590eba69f4fa5bd347236'],False,packages.html
+98b57aa5b4d20f73ef4465cd96f4f6f3b9c63fbc,"Merge pull request #1519 from nexB/1501-rename-fixed-vuln-column
+
+Rename ""Fixed by vulnerabilities"" column","['6727786739ed0e78667590eba69f4fa5bd347236', 'd9eb90eb3ed47de149ae3766e12a7226257b8ba4']",True,
+7306e162b9d4cfc98d8815eece700b939dd50665,"Finish renaming the former 'Fixed by vulnerabilities' column #1520
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1520
+Related prior issue: https://github.com/nexB/vulnerablecode/issues/1501
+Updates: https://github.com/nexB/vulnerablecode/pull/1519
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['98b57aa5b4d20f73ef4465cd96f4f6f3b9c63fbc'],False,packages.html
+97fcbcf2010fc42e2fd24848ac49a4c413b03175,"Merge pull request #1522 from nexB/1520-finish-renaming-fixed-vuln-column
+
+Finish renaming the former 'Fixed by vulnerabilities' column","['98b57aa5b4d20f73ef4465cd96f4f6f3b9c63fbc', '7306e162b9d4cfc98d8815eece700b939dd50665']",True,
+8728e05a17339b13c138a58b4775edfdc292fc97,"Fix function name in recursive path resolver
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['9cd44adab2f6a9fc5ce8fc1165a6acbf9207b66f'],False,gitlab.py
+57add778b45705e5ba0889e352510462691777f5,"Support advisory comparison across different DataSources
+
+- Add debug flag --vers to display equivalent normalized versions for corresponding native ranges.
+- Add debug flag --no-compare to run the CLI without comparison.
+- Auto-adjust text table width based on the terminal width.
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['7ad42b76120fbcb92822ab4d58177ff04620a671'],False,vulntotal_cli.py
+85d3234cc4a8ebbfba688bbd8e8905ba41e54f87,"Properly parse Snyk fixed versions
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['31830fd37a99b5ebceaeedc0066f7d66caa4546d'],False,"snyk.py, vulntotal_utils.py"
+38991d9be916f73219f4ba1d8f2d72b5fcdebbac,"Merge branch 'main' into 1287-resume-combining-affected-fixed-tabs
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1287
+Signed-off-by: John M. Horan johnmhoran@gmail.com","['734641109cb5368d821736c2cdf6086c15d756b3', '97fcbcf2010fc42e2fd24848ac49a4c413b03175']",True,
+84a35db9d99d6417bf6343ef8c2ce6a7d53352e1,"Add support for reference_type (#1518)
+
+* Revert ""Revert ""Add support for reference_type (#1502)"" (#1517)""
+
+This reverts commit 6727786739ed0e78667590eba69f4fa5bd347236.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Fix cargo test
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Fix test by adding reference_type to ordering list
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Regen apache_kafka test fixture
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+---------
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+Co-authored-by: ziadhany <ziadhany2016@gmail.com>
+Co-authored-by: Keshav Priyadarshi <git@keshav.space>",['574d06ee84f485b2249529b3fe0d23bd1ac8c661'],False,"api.py, importer.py, fireeye.py, improve_runner.py, 0058_alter_vulnerabilityreference_options_and_more.py, models.py, vulnerability_details.html, test_api.py, CVE-1999-1199-apache-httpd-expected.json, CVE-2017-9798-apache-httpd-expected.json, CVE-2021-44224-apache-httpd-expected.json, CVE-2022-28614-apache-httpd-expected.json, apache-httpd-improver-expected.json, apache-kafka-improver-expected.json, to-advisory-apache_kafka-expected.json, apache-tomcat-improver-expected.json, parse-apache_tomcat-selected-advisories-expected.json, archlinux-multi-expected.json, parse-advisory-archlinux-expected.json, debian-expected.json, debian-improver-expected.json, alpine-expected.json, alpine-input.json, nvd-expected.json, nvd-input.json, elixir-expected.json, elixir-improver-expected.json, parse_advisory_data-expected.json, fireeye_test2_expect.json, gentoo-expected.json, cargo-expected.json, composer-expected.json, gem-expected.json, golang-expected.json, inference-expected.json, maven-expected.json, npm-expected.json, nuget-expected.json, pypi-expected.json, github_osv_expected_1.json, github_osv_expected_2.json, github_osv_expected_3.json, github_osv_expected_4.json, github_osv_expected_5.json, github_osv_expected_6.json, github_osv_expected_7.json, composer-expected.json, composer-improver-expected.json, gem-expected.json, gem-improver-expected.json, golang-expected.json, golang-improver-expected.json, maven-expected.json, maven-improver-expected.json, npm-expected.json, npm-improver-expected.json, nuget-expected.json, nuget-improver-expected.json, pypi-expected.json, pypi-improver-expected.json, istio-expected.json, istio-improver-expected.json, kbmsr2019-expected.json, expected-md.json, expected-yml.json, improver-advisories.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, npm-improver-expected.json, nvd-expected.json, nvd-rejected-expected.json, improver-advisories.json, improver-inferences-expected.json, security_advisories-advisory_data-expected.json, security_advisories-importer-expected.json, oss-fuzz-data1.yaml-expected.json, oss-fuzz-data2.yaml-expected.json, parse-advisory-npm-expected.json, parse-advisory-xen-expected.json, parse-advisory-postgresql-expected.json, pypa-expected.json, pysec-advisories_with_cwe-expected.json, pysec-advisories_with_summary-expected.json, pysec-advisories_without_summary-expected.json, redhat-expected.json, expected_file.json, CVE-2007-5770-expected.json, CVE-2010-1330-expected.json, CVE-2018-11627-expected.json, CVE-2018-7212-expected.json, parse-advisory-ruby-expected.json, ruby-improver-expected.json, suse-oval-CVE-2008-5679-expected.json, suse-cvss-scores-expected.json, ubuntu-oval-expected.json, ubuntu-oval-improver-expected.json, ubuntu-usn-expected.json"
+3d644bc85076c492e3189d5e2deb44a218e1dfd6,Merge branch 'main' into 1287-resume-combining-affected-fixed-tabs,"['38991d9be916f73219f4ba1d8f2d72b5fcdebbac', '84a35db9d99d6417bf6343ef8c2ce6a7d53352e1']",True,
+0fe73ef18b5e2af63251eadf9809a03d0a803907,"Rename migration file
+Fix migration conflict
+Fix cargo test ( add ref type )
+Fix merge conflict
+Add api test for epss
+Keep the EPSS score separate from the severity score range
+Add epss tab
+Add epss to severity scoring
+Add published_at date to the Vulnerability score model.
+Add EPSS importer
+Add EPSS model
+Add EPSS UI
+Add EPSS to api
+Fix api test
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['84a35db9d99d6417bf6343ef8c2ce6a7d53352e1'],False,"api.py, import_runner.py, importer.py, __init__.py, epss.py, 0059_vulnerabilityseverity_published_at_and_more.py, models.py, severity_systems.py, vulnerability_details.html, test_api.py, views.py"
+53b84d16698ed082a4b78a350a249e86e83ad88a,"Fix test (#1206)
+
+Fix disk storage structure
+Redefine the disk storage structure
+Add a test for write_vul_data
+Rename file extension from yaml to yml again
+Add Filter before prefetch_related
+Add paginated again
+Fix typo in export and rename files
+from yaml to yml
+Fix filename error , Remove / from filename
+Create a query for distinct ecosystems
+Try to improve export performance again
+Try to improve export performance by load all data in memory before start writing on disk
+Improve export vulnerablecode data performance
+Try to improve export performance
+Try to improve performance by adding pagination
+Fix filename for export files
+Add multiple parameterizes for create_sub_path test .
+Add new format for exporting vulnerablecode-data
+Add a test
+Fix export test with yaml format
+Change the export format from json to yaml
+Add test for export command
+Add test for write_vuln_data function
+Edit export.py , Fix missing attribute in vuln_data
+Export vulnerablecode-data
+Add new format for exporting vulnerablecode-data
+Add a test
+Fix export test with yaml format
+Change the export format from json to yaml
+Add test for export command
+Add test for write_vuln_data function
+Edit export.py , Fix missing attribute in vuln_data
+Export vulnerablecode-data
+Add new format for exporting vulnerablecode-data
+Add a test
+Fix export test with yaml format
+Change the export format from json to yaml
+Add test for export command
+Add test for write_vuln_data function
+Edit export.py , Fix missing attribute in vuln_data
+Export vulnerablecode-data
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['1561efecb956080f676d2fa1933a922027378492'],False,"export.py, test_export.py"
+e5ca080b06a0fae5d278f023bede40ed314d01a3,"Add matched affected/fixed-by Packages with correct sorting #1287
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1287
+- Matched affected/fixed-by Package data added to Vulnerability details.
+- version_class-based sorting added to that data as well.
+- Note that version_class-based Packages sorting still needs to be added
+  to Package search results.
+- Filter added to encode Package URLs.
+- Next: will add tests.
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>",['38991d9be916f73219f4ba1d8f2d72b5fcdebbac'],False,"package_details.html, packages.html, vulnerabilities.html, vulnerability_details.html, url_filters.py, views.py"
+b3e8b4032b1f73affd7be38866ac1ceebe8692d6,Merge branch '1287-resume-combining-affected-fixed-tabs' of github.com:nexB/vulnerablecode into 1287-resume-combining-affected-fixed-tabs,"['e5ca080b06a0fae5d278f023bede40ed314d01a3', '3d644bc85076c492e3189d5e2deb44a218e1dfd6']",True,
+83339526cac670e6096ac96472be004c98ade019,"Merge branch 'main' into 1287-resume-combining-affected-fixed-tabs
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1287
+- Fixed merge conflicts.
+Signed-off-by: John M. Horan <johnmhoran@gmail.com>","['b3e8b4032b1f73affd7be38866ac1ceebe8692d6', '53b84d16698ed082a4b78a350a249e86e83ad88a']",True,
+457f8f8ce8550502714d3f19d914c5ab2409c935,"Improve performance of API calls #1538 (#1547)
+
+* Add pyinstrument to debug mode
+
+Reference:https://github.com/nexB/vulnerablecode/issues/1538
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Apply minor cosmetic models.py changes
+
+Remove unused imports
+Move univers monkey patching to top level
+
+Reference:https://github.com/nexB/vulnerablecode/issues/1538
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Annotate queryset for is_vulnerable
+
+* is_vulnerable is now a queryset annotation.
+* with_is_vulnerable Package manager method annotates the queryset
+* It is now called anywhere needed.
+
+The results with a single API call to
+http://127.0.0.1:8001/api/packages/63 are:
+* before 1.7 sec
+* after  0.25 sec
+
+Or an improvement where the old is 6.8 times slower than the new.
+
+Reference:https://github.com/nexB/vulnerablecode/issues/1538
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Improve sorting of packages by version
+
+* simplify sorting code, revert to using lists
+* use cached_property where relevant
+
+Reference:https://github.com/nexB/vulnerablecode/issues/1538
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Annotate queryset for is_vulnerable everywhere
+
+* Fix how we find vulnerable and non vulnerable versions
+* Complete using is_vulnerable in relevant querysets.
+* Adjust tests for clarity and DRY using small method to make the tests
+  setup easier to read
+* Use proper typing annotation for PackageURL or str
+* Add new Package manager from_purl() method to create a Package from
+  a PURL
+
+Reference:https://github.com/nexB/vulnerablecode/issues/1538
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+* Do not print things in tests
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>
+
+---------
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['53b84d16698ed082a4b78a350a249e86e83ad88a'],False,"setup.cfg, api.py, models.py, test_api.py, test_throttling.py, utils.py, settings.py"
+ebd8cdcb29afd19c837be6729bd8550d323083ab,"Merge branch 'main' into 1287-resume-combining-affected-fixed-tabs
+
+Reference: https://github.com/nexB/vulnerablecode/issues/1287
+Signed-off-by: John M. Horan johnmhoran@gmail.com","['7e740a6459b9891c764f6c9cd9a600fc40c447fc', '457f8f8ce8550502714d3f19d914c5ab2409c935']",True,
+8b6aaf5875f6db4680888e041a92db2689a0606e,"Add support for CVSSv4 & SSVC and import the data using vulnrichment (#1484)
+
+Add vulnrichment importer.
+Add support to CVSSv4
+Add vulnrichment importer.
+Add Support for SSVC.
+Add SSVC calculator.
+Ignore affected packages
+Add support for ref cpes & fix the tests
+Fix ssvc calculator bug
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['457f8f8ce8550502714d3f19d914c5ab2409c935'],False,"__init__.py, nvd.py, vulnrichment.py, severity_systems.py, vulnerability_details.html, vulnrichment-data1-expected.json, vulnrichment-data1.json, vulnrichment-data2-expected.json, vulnrichment-data2.json, vulnrichment-data3-expected.json, vulnrichment-data3.json, test_vulnrichment.py, views.py"
+d567bb0b05dc4e5ae4fadcfba219d1a579d4aefd,Merge branch 'main' into 1541-fix-importer-crash,"['be28af3c5f00aa321ee9f575a15bdd65de6a2196', 'cb38a5832345fdfe9dd110d8895298e8f59cfe05']",True,
+b7a723727443f96351cf27841577959faf24c2f4,"Merge pull request #1542 from aboutcode-org/1541-fix-importer-crash
+
+Fix importer crash #1541","['cb38a5832345fdfe9dd110d8895298e8f59cfe05', 'd567bb0b05dc4e5ae4fadcfba219d1a579d4aefd']",True,
+b6a7877ef933ce453545eb6a3b497fbcba5ff73e,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['adf47c60f504ebb5ac21d7e2ea029e495323165c'],False,"api.py, models.py"
+21ec05c5c44aad79bf718dc23240ce91c6592a06,"Fix formatting
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['01785008dea93cf5ba9ffcd4d3c54d177acc7d78'],False,api.py
+e0c073d24b61f56cedeaa0f4cc5263a2cd2c80a6,"Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['21ec05c5c44aad79bf718dc23240ce91c6592a06'],False,test_api.py
+76428daae772c87973e25a9f5730f70afa52afa1,"Merge pull request #1567 from aboutcode-org/fix-severity-range
+
+Add severity range score in API","['d62f3778936d8444b7a88be8d8bdad1ccfd44a58', 'e0c073d24b61f56cedeaa0f4cc5263a2cd2c80a6']",True,
+ce1ea4c248b07c32350f8158841364d7593d35da,"Fix failing test
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['bb5c0061107ca0e9778cad7ca87f243280885e30'],False,"__init__.py, __init__.py, test_base_pipeline.py, test_advisory.py"
+1c39cc199bbdf53cce83cbf92f699f1c7cc66abe,"Inline test fixtures
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['6b8b97808f93757992f6c8d673a455c266cc6426'],False,"__init__.py, test_base_pipeline.py, test_advisory.py"
+f245491373eb47a63c0a216d7f54977306d36d71,"Add new Weakness.cwe property
+
+This is the CWE-prefixed value that we want to commonly display.
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['670814b6a505b26d8699dee2a8221b3b051439ee'],False,models.py
+9a5f070f4580f4dd0d165d7d60a439b2c37ae92a,"Fix typo in VCID path generator
+
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['bb3c80652cf5ca25260fd92362facf63cbd9cf15'],False,__init__.py
+515cd70cfdd6f1de636768ebb43b52b4a4503684,Merge branch 'main' into 1287-resume-combining-affected-fixed-tabs,"['76c5eda86377aba8bf8f98521759b5100aac80b0', 'a7b002fe4840cdc3023603d0c673cc83e751c059']",True,
+b094cb5466a44964ff7e46e73466dafcf3538d50,"Fix typo in Kev requests import
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>",['ed17dbd5a7537b95faf9ef8d30a95333ffdcb3ca'],False,vulnerability_kev.py
+7fbff801a8190213aba179c275ee9ca40bd67f51,"Merge pull request #1594 from ziadhany/fix-kev
+
+Fix typo in Kev requests import","['ed17dbd5a7537b95faf9ef8d30a95333ffdcb3ca', 'b094cb5466a44964ff7e46e73466dafcf3538d50']",True,
+9c6c2191e555ab0113631635d2d4376513b6efb7,"Merge pull request #1596 from aboutcode-org/fix-release-ci
+
+Bump upload-artifact to v4","['a57455a6f8e2e050b6732053c81d266e86bfcf35', '831f7edf7fca8f7083e330dfb364b28baff6c4d0']",True,
+56352799e530d2fbe24aab4ddd86f3775a2233d3,"Do not crash importer due to missing version range #1214
+
+* Instead return None if we cannot get proper fixed or affected version
+
+Reference: https://github.com/aboutcode-org/vulnerablecode/issues/1214
+Signed-off-by: Jan-Niclas Struewer <j.n.struewer@gmail.com>
+Signed-off-by: Philippe Ombredanne <pombredanne@nexb.com>",['16af83f4b38e293e404417a51eee06f4b5819e57'],False,"importer.py, default.py, models.py, test_default_improver.py"
+4ee75ddb14302676c64eb5b5cb9c9d884bf43e9e,Merge remote-tracking branch 'origin/main' into fix-ver-range,"['56352799e530d2fbe24aab4ddd86f3775a2233d3', '094c2bfd996a8ffc24d44e135493b7173a5f474f']",True,
+a4a3b3e0c07f7494775bacef258403463cfb825b,Merge branch 'main' into 1287-resume-combining-affected-fixed-tabs,"['515cd70cfdd6f1de636768ebb43b52b4a4503684', '021b568106f7d9a144542ab70f32170e6029b4d6']",True,
+433f2a966c7a2f3bc00337264425bcb51c538c28,"Merge pull request #1528 from aboutcode-org/1287-resume-combining-affected-fixed-tabs
+
+Match affected and fixed-by Packages","['021b568106f7d9a144542ab70f32170e6029b4d6', 'a4a3b3e0c07f7494775bacef258403463cfb825b']",True,
+e273c67e7b48e09337de00367cabd23ceb566604,"Add support for Exploit model (#1562)
+
+* Migrate ( metasploit, exploit-db, kev ) to aboutcode pipeline.
+Set data_source as the header for the exploit table.
+Squash the migration files into a single file.
+Add test for exploit-db , metasploit
+Add a missing migration file
+Rename resources_and_notes to notes
+Fix Api test
+Refactor metasploit , exploitdb , kev improver
+Rename Kev tab to exploit tab
+Add support for exploitdb , metasploit, kev
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Implement the appropriate LoopProgress progress bar.
+Refactor the error handling logic in the code.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Resolve migration conflicts.
+Address the exploit in the API extension.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Add any missing logs message
+Remove unused logging module
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Migrate ( metasploit, exploit-db, kev ) to aboutcode pipeline.
+Set data_source as the header for the exploit table.
+Squash the migration files into a single file.
+Add test for exploit-db , metasploit
+Add a missing migration file
+Rename resources_and_notes to notes
+Fix Api test
+Refactor metasploit , exploitdb , kev improver
+Rename Kev tab to exploit tab
+Add support for exploitdb , metasploit, kev
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Implement the appropriate LoopProgress progress bar.
+Refactor the error handling logic in the code.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Resolve migration conflicts.
+Address the exploit in the API extension.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Add any missing logs message
+Remove unused logging module
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Fix migration conflict
+Add pipeline_id for ( kev, metasploit, exploit-db )
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Remove unwanted migration file
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Add log traceback for all the errors.
+Add missing logs
+Handle cases of one exploit for multiple vulnerabilities.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Skip empty aliases
+Remove empty vulnerability_kev.py file
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Replace references log with interesting_references
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+
+* Use proper labels in vulnerability details
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Display Known/Unknown for ransomware campaign use
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+---------
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+Co-authored-by: Keshav Priyadarshi <git@keshav.space>",['d16bdf38b8eb865594745514755a8b921a71d5a6'],False,"api.py, api_extension.py, __init__.py, vulnerability_kev.py, 0069_exploit_delete_kev.py, models.py, enhance_with_exploitdb.py, enhance_with_kev.py, enhance_with_metasploit.py, vulnerability_details.html, test_exploitdb.py, test_kev.py, test_metasploit.py, test_api.py, files_exploits.csv, modules_metadata_base.json"
+a6ce64c40c789d5a51f35571bf5ae8f90e4177a8,"Properly migrate crispy_forms to 2.x
+
+- Crispy removed all Bootstrap template packs.
+- These template packs are now available as standalone packages.
+- See https://github.com/django-crispy-forms/django-crispy-forms/releases/tag/2.0
+
+- Fixes https://github.com/aboutcode-org/vulnerablecode/issues/1602
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['e273c67e7b48e09337de00367cabd23ceb566604'],False,"requirements.txt, setup.cfg, settings.py"
+cf2e6c83c1a8b5a025588121f8efab6c53ce2c75,"Fix Swagger API documentation
+
+- Revert drf-spectacular to 0.24.2
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['a6ce64c40c789d5a51f35571bf5ae8f90e4177a8'],False,"requirements.txt, setup.cfg"
+dda8ab0d6e8fd251f2ec6c4970ba72606ef8ef89,Merge pull request #1603 from aboutcode-org/1602-fix-500-api,"['e273c67e7b48e09337de00367cabd23ceb566604', '447d1bfca73b4bd5c1e43c1e9e6f400365069b4b']",True,
+46bc48e82e6dd33761c9506715c9571c3bbfb544,Merge branch 'main' into 1214-fix-ver-range,"['4ee75ddb14302676c64eb5b5cb9c9d884bf43e9e', '289f4b823b6be636216bae04a637b770a71d1f29']",True,
+46ace78cfd662eea714cebdbcb7a043fc629d309,"Update GitHub importer test fixture
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['4a2151a9fba1db806086e630a5f556b1773438f4'],False,"valid_versions.py, test_github_importer_pipeline.py, test_nginx_importer_pipeline.py"
+2e437b437e2d64639f33e7aea7921bcddc8923ec,Merge branch 'main' into 1214-fix-ver-range,"['46bc48e82e6dd33761c9506715c9571c3bbfb544', 'bcf02ac5acdbe3496d4c0b73b53853ee91b2c440']",True,
+1440d6917229c7b7923a63edc1dbd97373f17aa0,"Fix migrations
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['30fc2b85b8cf801c9ca4ce7a688a5637b2fd6e27'],False,"0072_remove_package_vulnerabilities.py, 0072_remove_package_vulnerabilities_and_more.py, 0073_remove_vulnerability_packages_and_more.py, 0074_vulnerability_fixed_by_packages.py"
+7f17b45fa345bb3075679d67ac461b0be3317ad5,"Fix API
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['1440d6917229c7b7923a63edc1dbd97373f17aa0'],False,"api.py, models.py, advisory.py"
+3d5f8d077fd48b801474deb2570e23def0bda00d,"Fix migrations order
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['7f17b45fa345bb3075679d67ac461b0be3317ad5'],False,"0070_alter_advisory_created_by_and_more.py, 0071_auto_20241007_1044.py"
+e412d135e643a13853fa859499c85c416cf2945e,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['3d5f8d077fd48b801474deb2570e23def0bda00d'],False,"api.py, api_extension.py, import_runner.py, improve_runner.py, export.py, 0073_delete_packagerelatedvulnerability.py, models.py, test_api.py, test_api_extension.py, test_example.py, test_export.py, test_fix_models.py, test_improve_runner.py, test_models.py"
+495b425474bb6f3430da18e8cddbada71037084c,Merge branch 'main' into 1214-fix-ver-range,"['2e437b437e2d64639f33e7aea7921bcddc8923ec', 'd1f4c74610b52cff5a506e39662ad15f0f7df1ba']",True,
+455e3cb986315cf4edcbc14f00f5d65d0c7d97f9,"Fix failing tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['e412d135e643a13853fa859499c85c416cf2945e'],False,test_api.py
+6f8884548e6eaa15b259abe9e81f41adc01156c7,"Merge pull request #1598 from aboutcode-org/1214-fix-ver-range
+
+Fix vers range crash","['d1f4c74610b52cff5a506e39662ad15f0f7df1ba', '495b425474bb6f3430da18e8cddbada71037084c']",True,
+0857f24dc2b0293414765f97b8c519b607a344b0,"Fix docs build command
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['feab9fd7e232edd9f81eebd0b0492e869a507954'],False,Makefile
+b515f6b069fbd87ad259693176191b9383061239,"Enable console logging in DEBUG
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['2bac2e071a7cae56ca8201f842daf3dc48fb90cc'],False,settings.py
+45070e8fd5d2eb548c8c9f26fc67e32a0a178a35,"Merge pull request #1629 from aboutcode-org/1557-fix-cpe
+
+Fix 500 error in /api/cpes endpoint","['2bac2e071a7cae56ca8201f842daf3dc48fb90cc', 'c7a93583259cd66c4964e1b0d260e4f0cdbe7ab1']",True,
+8f1f4a9e73639943898def89c879fc8ca62e7b23,Merge branch 'main' into fix-migration,"['868810de33a10bf4770995d211ee3eac499e7f5a', '590c91a6184db2820febdb92a78ebe989a0aaa06']",True,
+38b97ffa975da319f21bb5a5ecbeb3dc74bc7042,"Merge pull request #1630 from aboutcode-org/fix-migration
+
+Avoid memory exhaustion during data migration","['590c91a6184db2820febdb92a78ebe989a0aaa06', '8f1f4a9e73639943898def89c879fc8ca62e7b23']",True,
+0e13b556df8d225757eaa3d564f615a7bca8bf4b,"Add support for Calculating Package Vulnerability Risk (#1593)
+
+* Migrate ( metasploit, exploit-db, kev ) to aboutcode pipeline.
+Set data_source as the header for the exploit table.
+Squash the migration files into a single file.
+Add test for exploit-db , metasploit
+Add a missing migration file
+Rename resources_and_notes to notes
+Fix Api test
+Refactor metasploit , exploitdb , kev improver
+Rename Kev tab to exploit tab
+Add support for exploitdb , metasploit, kev
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Implement the appropriate LoopProgress progress bar.
+Refactor the error handling logic in the code.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Fix migration conflict
+Add pipeline_id for ( kev, metasploit, exploit-db )
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Migrate ( metasploit, exploit-db, kev ) to aboutcode pipeline.
+Set data_source as the header for the exploit table.
+Squash the migration files into a single file.
+Add test for exploit-db , metasploit
+Add a missing migration file
+Rename resources_and_notes to notes
+Fix Api test
+Refactor metasploit , exploitdb , kev improver
+Rename Kev tab to exploit tab
+Add support for exploitdb , metasploit, kev
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Implement the appropriate LoopProgress progress bar.
+Refactor the error handling logic in the code.
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Remove unwanted migration file
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Add support for Calculating Risk in VulnerableCode
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Remove unwanted migration file
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Add a prefetch to try to optimize query performance
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Empty risk when there is no data
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Create a pipeline for package risk
+
+Signed-off-by: ziadhany <ziadhany2016@gmail.com>
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Load the weight once
+uncomment all importers
+
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Update the risk description in the model. Rename the pipeline from RiskPackagePipeline to ComputePackageRiskPipeline. Add a tooltip for risk, and remove any unused imports in the view.
+
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Rename the pipeline step from add_risk_package to add_package_risk_score and remove any extra whitespace in views.py.
+
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Resolve migration conflict
+
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Rename the pipeline file
+Add pagination and refactor bulk_update_package
+
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Update the weight_config dict and modify it to use domain names.
+
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+
+* Add license header
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Move weight config to python file
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Skip packages with no risk score
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+---------
+
+Signed-off-by: ziad hany <ziadhany2016@gmail.com>
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+Co-authored-by: Keshav Priyadarshi <git@keshav.space>",['38b97ffa975da319f21bb5a5ecbeb3dc74bc7042'],False,"api.py, __init__.py, 0075_package_risk_score.py, models.py, compute_package_risk.py, enhance_with_exploitdb.py, enhance_with_kev.py, enhance_with_metasploit.py, risk.py, package_details.html, test_compute_package_risk.py, test_enhance_with_exploitdb.py, test_enhance_with_kev.py, test_enhance_with_metasploit.py, test_pysec_importer_pipeline.py, test_api.py, test_risk.py, weight_config.py"
+91657107d2872d1b60f7f743d4d1bc617aa5478d,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['2d0a10b22aa8dd19714de691f774294fe086826e'],False,test_v2_api.py
+7b14634ceda6c82f6073ac1d6d477ed91691eb44,"Fix formatting
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['849e605b40c705146bfb825fbf668e70a20c2ab1'],False,v2_api.py
+c73f6212e48a0853c634d4039d5faea43140dc03,"Fix formatting
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['7b14634ceda6c82f6073ac1d6d477ed91691eb44'],False,urls.py
+208658e95096faff7f061f8339274c6e4a55e7a8,"Fix tests import
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['c73f6212e48a0853c634d4039d5faea43140dc03'],False,test_v2_api.py
+8bca5cc9d01b194f1af399fa4d6196993bce5d22,"Merge pull request #1636 from aboutcode-org/1597-refactor-vulnerability-severity
+
+Refactor severity score model and fix incorrect suse scores","['8a68c97dfa369ad048de3ece14cc1b3cf40591cc', 'a008c37968b41890acac3ad7958cf59dc8b3671e']",True,
+17381949f5f7ddc585f928e1977e655a1832aeb7,"Fix API errors
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['297ab515c64d27c1aa1dfae8338a50798f465b6d'],False,"api.py, test_api.py"
+fad3f932d9e49e20354cf2d4fdb1a05228de0a9e,"Fix API bug
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['17381949f5f7ddc585f928e1977e655a1832aeb7'],False,test_api.py
+fe4073f81e33c0a52324c1827fc9609f0e9d2c35,Merge branch 'main' into fix_api_error,"['aeb9f58a95159746147896f0c3847f2147963dc9', 'bac2274de0f3bb97d11b9e90f105d39075967259']",True,
+ef1df71a0a119360dac525ce28ab1815706797e4,"Merge pull request #1654 from aboutcode-org/fix_api_error
+
+Fix API bug","['bac2274de0f3bb97d11b9e90f105d39075967259', 'fe4073f81e33c0a52324c1827fc9609f0e9d2c35']",True,
+dc19883e9130dcf54183fc861501d6413b96a4ac,"Fix formatting
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['ca23847c72610c11aa5f3648c966aba3bfab7de8'],False,api.py
+a03d01b9ab608346fc367336f00aff854490fc6a,"Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['dc19883e9130dcf54183fc861501d6413b96a4ac'],False,test_api.py
+ae4abd86e8d9f8ecab22482e45790a64e30e4f47,"Do not report ghost packages as fix for vulnerabilities in UI
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['dc2b367f935e9024fff2c94bbd93e552e2e8fa16'],False,views.py
+7fe3a7e0c1996cc7ee9806605a976e2207a591a5,"Do not report ghost packages as fix for vulnerabilities in APIv1
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['7ff2a0f9c10b572beb0a9bc8e104e8ea8a2eb31b'],False,api.py
+d695d97d1c526dc2e5c8b46542bdff5c5ea2558c,"Do not report ghost packages as fix for vulnerabilities in APIv2
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['a5a58456446bb66dd07bd9c9e8a86fe907468a56'],False,api_v2.py
+c21bf1ff50bbe9090b6e386edcaae6e8413708fa,"Merge pull request #1679 from aboutcode-org/1650-ghost-cant-fix
+
+Do not report ghost package as a fix for vulnerability","['dc2b367f935e9024fff2c94bbd93e552e2e8fa16', '650df4ca29a3b8b986261f6d46f2772fcc51622a']",True,
+c9233647e7aab3d50e28d02c7bd7fc3d0babe294,"Add pipeline to sort packages (#1686)
+
+* Add pipeline to sort packages
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add calculate_version_rank on Package
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Start enumerating from 1
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Return version rank anyhow
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix API tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['cec5d9e7a8a0f9df3623f75ece647a6e4f1e0383'],False,"__init__.py, 0084_alter_package_options_package_version_rank.py, models.py, compute_package_version_rank.py, test_api.py, test_compute_package_version_rank.py, test_models.py"
+ae220d1acfe9b9bc3fa2c995229e7338fa3f8152,"Fix urls for API (#1678)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['c9233647e7aab3d50e28d02c7bd7fc3d0babe294'],False,urls.py
+3cee7717864c54c50b865cefc7d6c18d7a8783b7,"Add indexes for models (#1701)
+
+* Reorder Meta and core properties
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add todo
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add indexes on models
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add migrations
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add indexes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add migrations
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix formatting issues
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['b47f382eab5a0d9da10d4b9d3b8e7efda97463f8'],False,"0085_alter_package_is_ghost_alter_package_version_rank_and_more.py, models.py"
+cebb5d64d1a0c0f7479df999a83510a5bf76d798,"Add fixed by package in V2 API (#1706)
+
+* Add fixed by package in V2 API
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['3cee7717864c54c50b865cefc7d6c18d7a8783b7'],False,"api_v2.py, test_api_v2.py"
+8519b0d2daa0d73d5d6313e30c50c269f10d27f2,"Add models for CodeFix
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['7f82ef4d5c2e6c537accd98d5173c8c84852f7a9'],False,"0085_codefix.py, models.py"
+6f984c3e7c17b53a0b22168692fc740686460b60,"Add pipeline to collect fix commit
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['8519b0d2daa0d73d5d6313e30c50c269f10d27f2'],False,collect_commits.py
+b3c0ef260594caebb294e9433012792a85ce112a,"Fix
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['bcdc572515bbe437a36415b9e5d0314559a0c66c'],False,"0085_codefix.py, 0086_codefix.py, models.py, collect_commits.py"
+48d2144b8c0cf1145928f6c543f0604622a6144f,"Refactor the collect fix commit pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['c01f6ec81cba6c617063d2fcdbd7be3c253f2d78'],False,"collect_commits.py, test_collect_commits.py"
+7bb44be8bd2bd5a8bc157c2ad3a5d70e64b92a53,"Add CodeFix in API
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['991fbeb3aefdd1f2ef3f517c82860522f2edeb9f'],False,"api_v2.py, __init__.py, models.py, collect_commits.py, test_api_v2.py, urls.py"
+805590b89052a99465be5f68d9ce5cdda2b2c883,"Fix code
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['7bb44be8bd2bd5a8bc157c2ad3a5d70e64b92a53'],False,api_v2.py
+3d7c209395bd99e7e33aa30bd314a18fac98f033,"Minor Fix
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['805590b89052a99465be5f68d9ce5cdda2b2c883'],False,collect_commits.py
+5f49a4b3e37b458bb8156357bbe769a0b8b7e719,"Merge pull request #1735 from aboutcode-org/fix-local-docker-build
+
+Add default postgresql.conf for local docker build","['7f82ef4d5c2e6c537accd98d5173c8c84852f7a9', 'c132094166b74acd1ee21c1f6623fc34863a49fd']",True,
+e9a47e56017b115b987ea5a71a013b025eca7b52,Merge branch 'main' into collect_fix_commits,"['3d7c209395bd99e7e33aa30bd314a18fac98f033', '5f49a4b3e37b458bb8156357bbe769a0b8b7e719']",True,
+80430b2e07cd56130b4ee1a01edd8ccf45c96231,"Merge pull request #1704 from aboutcode-org/collect_fix_commits
+
+Add models for CodeFix","['5f49a4b3e37b458bb8156357bbe769a0b8b7e719', 'e9a47e56017b115b987ea5a71a013b025eca7b52']",True,
+8fe43f7623d6b86e75b632669ee137d095222aab,"Fix secret generation on mac
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['e484e3379cd727e7bd6dea98f210d3cd2dea8ad5'],False,Makefile
+cc6d3006847514aee950b2462d9013714c0dc4fe,"Add migration to fix alpine PURLs
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['8fe43f7623d6b86e75b632669ee137d095222aab'],False,0088_fix_alpine_purl_type.py
+411ae70b461ec7825f5ad4428d0f32f390b54340,Merge branch 'main' into fix-alpine-purl,"['3cb9d3f9b33e5812472d0972867ffcb97e1af2c2', '47063de0a35501d8c7eda8b3d01dd8324fc13e3c']",True,
+56eb4420242717c303dfee19531934065ea95818,"Merge pull request #1739 from aboutcode-org/fix-alpine-purl
+
+Use proper apk package type for Alpine","['47063de0a35501d8c7eda8b3d01dd8324fc13e3c', '411ae70b461ec7825f5ad4428d0f32f390b54340']",True,
+fabe0358056cee9cd94c195fa7613f7708a3a3a8,"Optimize vulnerabilities view (#1728)
+
+* Optimize vulnerabilities view
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix formatting
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix views
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Move severities to a different tab
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Separate views
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Refactor Views
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['56eb4420242717c303dfee19531934065ea95818'],False,"importer.py, models.py, vulnerability_details.html, vulnerability_package_details.html, sorted_purls.txt, test_view.py, utils.py, views.py, urls.py"
+cbda0ca26ba323293ac78ac89c22500bd5f392b3,"Fast content ID migration (#1795)
+
+Reference: https://github.com/aboutcode-org/vulnerablecode/issues/1796
+
+Recompute unique content ID for advisories and dedupe the advisories 
+
+* Add new content ID function
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests and address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* New content ID pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* New content ID pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove unique content ID from unqiue together
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove unique together from advisories
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix migrations
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix pipeline errors
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add filter for fast itreation
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Increase batch size
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix error
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add logs
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Defer db indexing for content id
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Ensure the reference id is always a string
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Alternate content id migration pipeline
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Keep the oldest advisory while deduping
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Use iterator() instead of paginated() for fetching advisories
+
+- paginated() performs poorly when iterating over large records compared
+to the built-in iterator()
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Move pipeline test to test/pipelines/
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+* Update test for the new dedupe pipeline
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>
+Co-authored-by: Tushar Goel <tushar.goel.dav@gmail.com>
+Co-authored-by: Tushar Goel <34160672+TG1999@users.noreply.github.com>",['432a7d446d4f9e8514487ede2465ca5aa0d59de9'],False,"importer.py, __init__.py, 0089_alter_advisory_unique_content_id.py, models.py, remove_duplicate_advisories.py, severity_systems.py, test_remove_duplicate_advisories.py, test_add_cvsssv31.py, test_compute_content_id.py, security_advisories-importer-expected.json, security_advisories-importer-expected.json, utils.py"
+6cc5bd3ac49a0045af8183e93c08378882bc27a3,"Update the test fixture to use the new alias field
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['0ba0593d894f083e5904d7988cac31fad97453dd'],False,"0090_migrate_advisory_aliases.py, test_base_pipeline.py, test_nginx_importer_pipeline.py, test_advisory.py, test_add_cvsssv31.py, security_advisories-importer-expected.json, security_advisories-importer-expected.json, test_example.py, test_import_runner.py, test_openssl.py, test_postgres_workaround.py, test_vulnerability_status_improver.py"
+ecdb4ad0367fefa4ca5a9d97eea481003bb70201,"Stop github OSV importer crashes (#1853)
+
+* Stop github OSV importer crashes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix formatting issues
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['83df390b727db39cfdf099e5658bdfb7b497a1d9'],False,osv.py
+3fb3e7571dd9f0483d8ca17cd7d6c8524c676509,"Fix alpine linux importer (#1861)
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['51a1c0b967887f5ad5d3f8af6e9b74740d64dac1'],False,"alpine_linux_importer.py, test_alpine_linux_importer_pipeline.py"
+4195e7699f38a585fcecaeeba8c734a335165c6d,"Prefix task queue services with vulnerablecode
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['edb6b6136857a19619db0aa57c7c22466086a634'],False,docker-compose.yml
+095691052724f7595e1d29b0d0de43dfc8dc42d9,"Use advisory JSONField to compute missing fix and affected
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['3683f2ce78365857b1777dbd061a8ef623f2f645'],False,compute_advisory_todo.py
+8801c905193db2b36eb774b25bed4a6fa598b852,"Add advisory v2 (#1866)
+
+Reference: VCIO-next: Design new Advisory -> Package -> Vulnerability models relationhips #1393
+VCIO-next: Advisory model migration Batch 1 #1877
+Add V2Advisory Model.
+V2Advisory Model should have relationships between other models like aliases, affected packages, references, severities and weaknesses.
+V2AdvisoyModel will have advisory ID. advisory ID will be a natural ID for example Redhat importer will have RHSA, NVD will have CVE, when there is no ID we will create one. For example NPM
+
+* Add AdvisoryV2 models
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Do formatting changes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add migrations
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add model changes and support new advisory ingestion
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add V2Pipelines
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Revert alpine linux importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Refactor compute content ID
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Formatting changes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix errors in compute content ID
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add github pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add V2 pipelines
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Rename pipelines
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add V2 importer pipelines
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Rename pipelines
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Reorder importers in registry
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for apache HTTPD importer pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for npm importer pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for github importer pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for pysec importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add license header files
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for Pypa importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for vulnrichment importer pipeline v2
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add UI for V2
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add Advisory Detail View
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix risk score pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Change API design
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for gitlab importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Test postgresql importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for elixir security importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for models
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Merge changes
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for compute package risk V2
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for compute package rank V2
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for V2 Importer Pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for exploits enhancement pipeline
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['11284eefc6790d8ea026ff0931903946ea2819e9'],False,"api_v2.py, forms.py, importer.py, __init__.py, curl.py, osv.py, __init__.py, import.py, 0094_advisoryalias_advisoryreference_advisoryseverity_and_more.py, models.py, __init__.py, apache_httpd_importer.py, elixir_security_importer.py, github_importer.py, gitlab_importer.py, npm_importer.py, nvd_importer.py, postgresql_importer.py, pypa_importer.py, pysec_importer.py, vulnrichment_importer.py, collect_commits.py, compute_package_risk.py, computer_package_version_rank.py, enhance_with_exploitdb.py, enhance_with_kev.py, enhance_with_metasploit.py, flag_ghost_packages.py, advisory.py, risk.py, advisory_detail.html, advisory_package_details.html, index_v2.html, package_details_v2.html, package_search_box_v2.html, packages_v2.html, test_apache_httpd_importer_pipeline_v2.py, test_collect_commits_v2.py, test_compute_package_risk_v2.py, test_compute_version_rank_v2.py, test_elixir_security_v2_importer.py, test_enhance_with_exploitdb_v2.py, test_enhance_with_kev_v2.py, test_enhance_with_metasploit_v2.py, test_flag_ghost_packages_v2.py, test_github_importer_v2.py, test_gitlab_v2_importer.py, test_npm_importer_pipeline_v2.py, test_postgresql_v2_importer.py, test_pypa_v2_importer_pipeline.py, test_pysec_v2_importer.py, test_vulnerablecode_importer_v2_pipeline.py, test_vulnrichment_v2_importer.py, test_advisory.py, utils.py, views.py, urls.py"
+32a71ce9dcd406def1a5e74a4d50f34860f2ceef,"Fix margin for pipeline_id in run detail view
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['e1094a2b6fbcacd8fc559d16e4d9cc86faf31205'],False,pipeline_run_details.html
+5aca627cbfa1bc2bab3acbfba5823c6b89e9a472,"Add advisory codefix V2 URL (#1926)
+
+* Add advisory codefix V2 URL
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add num query tests for codefix viewset
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add num query tests for codefix viewset
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Modify CHANGELOG
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['399329072a9a3815594dacfd230d2c4fee021a59'],False,"CHANGELOG.rst, api_v2.py, models.py, package_details_v2.html, test_api_v2.py, views.py, urls.py"
+da873aa7eb8f720fa06e2adcdf5c859c6a6cd8d1,"Replace reference with V2 (#1928)
+
+* Replace reference with V2
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix gitlab importer advisory ID
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Increase length for advisory ID
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['1c67eb760df63850978ed44c7ebd9b973ce90339'],False,"api_v2.py, importer.py, __init__.py, osv.py, 0097_alter_advisoryv2_advisory_id_and_more.py, models.py, apache_httpd_importer.py, elixir_security_importer.py, github_importer.py, gitlab_importer.py, npm_importer.py, nvd_importer.py, postgresql_importer.py, vulnrichment_importer.py, test_gitlab_v2_importer.py, test_postgresql_v2_importer.py"
+fdaaddd0ca5d3f7abeb292b53cf32106e40c9968,"Fix gitlab and elixir security importer (#1934)
+
+* Fix gitlab and elixir security importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['da873aa7eb8f720fa06e2adcdf5c859c6a6cd8d1'],False,"__init__.py, elixir_security_importer.py, gitlab_importer.py, advisory_detail.html, test_elixir_security_v2_importer.py, views.py, urls.py"
+8b57178922ecd52f6e72f142e7e4b217a7634e86,"Fix plural display of VulnerabilitySeverity in admin page
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['fdaaddd0ca5d3f7abeb292b53cf32106e40c9968'],False,"0098_alter_advisory_options_alter_advisoryalias_options_and_more.py, models.py"
+848a00eacf1adeba8c1950119be3c493cc8d1d7e,"Merge pull request #1930 from aboutcode-org/fix-plural
+
+Fix incorrect pluralization of model names","['fdaaddd0ca5d3f7abeb292b53cf32106e40c9968', '8b57178922ecd52f6e72f142e7e4b217a7634e86']",True,
+24224f35ced533859e6bf24930a85b7f5c14b9a9,"Merge pull request #1937 from aboutcode-org/altcha-fix
+
+Preserve field values on unsuccessful form submission","['848a00eacf1adeba8c1950119be3c493cc8d1d7e', '9f9abce732675c198068f0a8a2c6f34094005de7']",True,
+f423cb7b17ca76f9e2d587e65453c134dc3e88ab,"Migrate Xen, Curl, Istio, Mozilla, GitHub OSV and OSS-Fuzz importer (#1946)
+
+* Migrate Xen importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for Xen importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Migrate CURL importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add OSS Fuzz importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add OSS Fuzz importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Migrate Istio importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add tests for OSS-FUZZ
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add postgresql importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add mozilla importer
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix tests
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix linting errors
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['903a8edf78ed81cf092c7a34612c4947af53707c'],False,"importer.py, __init__.py, curl.py, osv.py, __init__.py, 0099_advisoryv2_original_advisory_text.py, models.py, __init__.py, apache_httpd_importer.py, curl_importer.py, elixir_security_importer.py, github_importer.py, github_osv_importer.py, gitlab_importer.py, istio_importer.py, mozilla_importer.py, npm_importer.py, nvd_importer.py, oss_fuzz.py, postgresql_importer.py, pypa_importer.py, pysec_importer.py, vulnrichment_importer.py, xen_importer.py, advisory.py, test_curl_importer_v2.py, test_github_importer_v2.py, test_github_osv_importer_v2.py, test_istio_importer_v2.py, test_mozilla_importer_v2.py, test_oss_fuzz_v2.py, test_postgresql_v2_importer.py, test_xen_importer_v2.py"
+0ae0057407199c3d0d9aad148fab9372c46db938,"Use impact to determine suitable fix for affected pkg
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['38599396890bc7ac01324816aedf5101406bdbfa'],False,"models.py, advisory_package_details.html, views.py"
+c5b78efdd45b848adc820472623c0a0fd6cc6d5d,"Use impact table to fetch fixed and affected pkg in API
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['0ae0057407199c3d0d9aad148fab9372c46db938'],False,api_v2.py
+a6be0881dfd8f5e872aff63204a199bca83e5a09,"Fix package filtering by PURL and Advisory ID
+
+Fixes: https://github.com/aboutcode-org/vulnerablecode/issues/1960
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['c5b78efdd45b848adc820472623c0a0fd6cc6d5d'],False,api_v2.py
+58fff59d04e1b7539f3170975069baa83c2fc037,"Include latest and next non-vulnerable versions in API v2
+
+Fixes: https://github.com/aboutcode-org/vulnerablecode/issues/1959
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['a6be0881dfd8f5e872aff63204a199bca83e5a09'],False,"api_v2.py, models.py"
+9f4d4d042ef8911c9cb42f84f96a540d118a5dd3,"Update CodeFix pipeline to process impacted packages
+
+Signed-off-by: Keshav Priyadarshi <git@keshav.space>",['79a7e7f781bf01346e3ef33f5949b08aa1eed453'],False,collect_commits.py
+5121e3171777101539f34cee702b344ac12b9106,"Merge pull request #1970 from aboutcode-org/unmerge-affected-range
+
+Add ImpactedPackage model to track affected and fixed packages","['b560955abd010571cff9f24b0aa9055aa30f7feb', '4ef60d234ce7916f3fd3db53628d9e4d319dd031']",True,
+55dc5d35ec44c990f5fa2063f3e69c1ddf1c0ea1,"Migrate advisory todo to v2 (#1966)
+
+* Migrate Advisory ToDo pipeline to V2
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove print statements
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Add compute advisory todo V2 to improver registry
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Remove unused imports
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Fix formatting issues
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+* Address review comments
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>
+
+---------
+
+Signed-off-by: Tushar Goel <tushar.goel.dav@gmail.com>",['5121e3171777101539f34cee702b344ac12b9106'],False,"__init__.py, 0101_advisorytodov2_todorelatedadvisoryv2_and_more.py, models.py, compute_advisory_todo.py, advisory.py, test_compute_advisory_todo_v2.py"
